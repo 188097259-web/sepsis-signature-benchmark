@@ -106,3 +106,9 @@ The base seed is 20261116. Each attempt of the random-signature pipeline uses a 
 | `results/batch/` | `batch_comparisons.csv`, `H4_result.csv`, `batch_outputs_long.csv` (label and score of every sample in every scenario), agreement between tools and the association between class and death by scenario |
 | `results/cmaise/` | Aggregate results of the local validation |
 | `results/power/` | Outputs of the precision simulation |
+
+## Licence
+
+- Code in `scripts/`: MIT licence, see `LICENSE`.
+- Results, tables and the material compiled by the authors: Creative Commons Attribution 4.0 International (CC BY 4.0), see `LICENSE-DATA.md`.
+- The processed cohort files in `data/cohorts/` derive from public GEO series and remain subject to the terms of the original data; see `LICENSE-DATA.md`.
