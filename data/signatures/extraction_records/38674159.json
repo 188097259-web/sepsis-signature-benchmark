@@ -1,0 +1,226 @@
+{
+ "pmid": "38674159",
+ "pmcid": "PMC11049877",
+ "first_author": "Feng A",
+ "year": "2024",
+ "journal": "Int J Mol Sci",
+ "title": "Free Radical-Associated Gene Signature Predicts Survival in Sepsis Patients.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Feng2024_ROS37",
+   "model_type": "unweighted_gene_set",
+   "purpose": "survival",
+   "outcome_definition": "28-day survival (sepsis high-risk vs low-risk = non-survivors vs survivors in E-MTAB-4421/4451)",
+   "genes": [
+    {
+     "symbol": "KRT1",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "BCL2",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "TYSND1",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "DHRS4",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "EPHX2",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "IFNG",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CCL5",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "MYC",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "SRC",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "PRDX4",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "GSS",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "HACL1",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "DNAJA3",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "GSTP1",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "PRDX2",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "PTGS2",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "HSPD1",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "FMO5",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "DNAJC9",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CCT4",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "IL12RB1",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "HSPA9",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CROT",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CCT3",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "JUN",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "SLC27A2",
+     "coef": 1,
+     "direction": "protective"
+    },
+    {
+     "symbol": "GSR",
+     "coef": -1,
+     "direction": "risk"
+    },
+    {
+     "symbol": "JAK2",
+     "coef": -1,
+     "direction": "risk"
+    },
+    {
+     "symbol": "DNAJC5",
+     "coef": -1,
+     "direction": "risk"
+    },
+    {
+     "symbol": "DNAJC4",
+     "coef": -1,
+     "direction": "risk"
+    },
+    {
+     "symbol": "RHOU",
+     "coef": -1,
+     "direction": "risk"
+    },
+    {
+     "symbol": "GCLM",
+     "coef": -1,
+     "direction": "risk"
+    },
+    {
+     "symbol": "MSRA",
+     "coef": -1,
+     "direction": "risk"
+    },
+    {
+     "symbol": "SOCS3",
+     "coef": -1,
+     "direction": "risk"
+    },
+    {
+     "symbol": "PECR",
+     "coef": -1,
+     "direction": "risk"
+    },
+    {
+     "symbol": "CYP1B1",
+     "coef": -1,
+     "direction": "risk"
+    },
+    {
+     "symbol": "ARG1",
+     "coef": -1,
+     "direction": "risk"
+    }
+   ],
+   "n_genes": 37,
+   "verbatim_formula": "sepsis survival score = sum_i W_i (e_i - mu_i)/S_i",
+   "higher_score_means": "lower risk",
+   "expression_scale_used": "per-gene z-score across the cohort (mean and SD of whole sample)",
+   "cutoff": "mean of survival score",
+   "reported_performance": "AUC 0.97 discovery (E-MTAB-4421), 0.91 validation (E-MTAB-4451)",
+   "source_location": "Methods (formula) + Table 1 (genes, weights)",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "E-MTAB-4421",
+   "role": "training",
+   "n_used": 265
+  },
+  {
+   "accession": "E-MTAB-4451",
+   "role": "external_validation",
+   "n_used": 106
+  }
+ ],
+ "notes": "Weights +1 for 26 genes higher in low-risk (survivor) group, -1 for 11 genes higher in high-risk group (Table 1). Lower score = worse prognosis. Gene list derived from authors' earlier survivor/non-survivor DEG list in E-MTAB-4421. PBMC samples collected up to 5 days after ICU admission. No GEO main cohorts used."
+}

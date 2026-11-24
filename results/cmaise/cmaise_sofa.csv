@@ -1,0 +1,9 @@
+item,value
+SOFA_pooled_auc,0.686915985091862
+SOFA_pooled_lo,0.612947022367492
+SOFA_pooled_hi,0.752457811996084
+base_auc_batch_SOFA_insample,0.688588007736944
+median_increment_published,0.00525006907985626
+median_increment_random,0.00725338491295935
+share_published_increment_gt_0.01,0.4
+share_random_increment_gt_0.01,0.41288748564868

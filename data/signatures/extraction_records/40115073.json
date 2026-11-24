@@ -1,0 +1,76 @@
+{
+ "pmid": "40115073",
+ "pmcid": "PMC11922721",
+ "first_author": "Luo XT",
+ "year": "2025",
+ "journal": "Front Cell Infect Microbiol",
+ "title": "Multi-omics analysis reveals that low cathepsin S expression aggravates sepsis progression and worse prognosis via inducing monocyte polarization.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Luo2025_MRMG4",
+   "model_type": "lasso_linear",
+   "purpose": "prognosis",
+   "outcome_definition": "not explicitly stated (LASSO 'to obtain monocyte-related genes involved in prognosis'); paper's survival analyses use GSE65682 28-day survival",
+   "genes": [
+    {
+     "symbol": "CD14",
+     "coef": -0.147593904,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CTSS",
+     "coef": -0.275885858,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CXCL8",
+     "coef": 0.13075836,
+     "direction": "risk"
+    },
+    {
+     "symbol": "THBS1",
+     "coef": 0.044931172,
+     "direction": "risk"
+    }
+   ],
+   "n_genes": 4,
+   "verbatim_formula": "",
+   "higher_score_means": "unclear",
+   "expression_scale_used": "unclear",
+   "cutoff": null,
+   "reported_performance": "None for the 4-gene signature; only CTSS single-gene KM in GSE65682 and CTSS nomogram",
+   "source_location": "Results (LASSO), Fig. 3B-C, Supplementary Table S4 (sheet 'Supplementary Tab 4', LASSO coefficients)",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE151263",
+   "role": "scRNA",
+   "n_used": null
+  },
+  {
+   "accession": "GSE167363",
+   "role": "scRNA",
+   "n_used": null
+  },
+  {
+   "accession": "GSE131761",
+   "role": "other",
+   "n_used": null
+  },
+  {
+   "accession": "GSE65682",
+   "role": "other",
+   "n_used": null
+  },
+  {
+   "accession": "GSE207651",
+   "role": "scRNA",
+   "n_used": null
+  }
+ ],
+ "notes": "Borderline eligibility: the 4-gene LASSO set is called a prognostic signature with coefficients in the supplement, but it is never scored or validated as a model; the paper then focuses on CTSS alone. The bulk dataset used for WGCNA/LASSO is not named (possibly GSE65682, which supplies survival data; uncertain). GSE131761 used for CTSS expression; GSE65682 for CTSS survival and DEG analysis; GSE207651 is mouse lung scRNA."
+}

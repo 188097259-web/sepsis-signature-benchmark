@@ -1,0 +1,3 @@
+quantity,se,ci_halfwidth
+"single model SE (Hanley-McNeil, AUROC 0.57)",0.0471848019619984,0.0924822118455169
+median of models SE (scaled by main-cohort ratio),0.0248285859918041,0.0486640285439359

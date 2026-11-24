@@ -1,0 +1,4 @@
+hypothesis,estimate,lo,hi,rule,supported,note
+H1,-0.0248037919533966,-0.045385334670235,-0.00193236233586926,upper 95% CI of Delta < 0.05,TRUE,non-superiority shown
+H2,0.593230208368272,0.556435189660407,0.62844966204582,lower 95% CI of E1 > 0.50,TRUE,
+replication_consistency,0.000247524752475137,-0.0272318481848183,0.0271472772277229,same sign as main Delta and |difference| < 0.05,FALSE,""

@@ -1,0 +1,121 @@
+{
+ "pmid": "36860871",
+ "pmcid": "PMC9968838",
+ "first_author": "Lin S",
+ "year": "2023",
+ "journal": "Front Immunol",
+ "title": "An immune genes signature for predicting mortality in sepsis patients.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Lin2023_7IRG",
+   "model_type": "linear_cox",
+   "purpose": "mortality",
+   "outcome_definition": "28-day survival (GSE65682 follow-up time and status)",
+   "genes": [
+    {
+     "symbol": "ADRB2",
+     "coef": -0.4102,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CTSG",
+     "coef": 0.1825,
+     "direction": "risk"
+    },
+    {
+     "symbol": "CX3CR1",
+     "coef": -0.181,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CXCR6",
+     "coef": 0.8549,
+     "direction": "risk"
+    },
+    {
+     "symbol": "IL4R",
+     "coef": -0.427,
+     "direction": "protective"
+    },
+    {
+     "symbol": "LTB",
+     "coef": -0.5605,
+     "direction": "protective"
+    },
+    {
+     "symbol": "TMSB10",
+     "coef": -0.6836,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 7,
+   "verbatim_formula": "Risk score = ADRB2 x (-0.4102) + CTSG x (0.1825) + CX3CR1 x (-0.1810) + CXCR6 x (0.8549) + IL4R x (-0.4270) + LTB x (-0.5605) + TMSB10 x (-0.6836)",
+   "higher_score_means": "higher risk",
+   "expression_scale_used": "normalized microarray data (RMA) per paper",
+   "cutoff": "median risk score",
+   "reported_performance": "AUC 0.804 training (n=240), 0.877 internal validation (n=239); GSE95233 (n=51) higher deaths with higher score, logistic independent; nomogram AUC 0.972",
+   "source_location": "Results 'Prognostic value of the IRG signature' + Figure 5A",
+   "released_code_or_model": "https://emergency.shinyapps.io/sepsis/ (nomogram web calculator only)"
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training",
+   "n_used": 240
+  },
+  {
+   "accession": "GSE65682",
+   "role": "internal_validation",
+   "n_used": 239
+  },
+  {
+   "accession": "GSE95233",
+   "role": "external_validation",
+   "n_used": 51
+  },
+  {
+   "accession": "GSE28750",
+   "role": "other",
+   "n_used": null
+  },
+  {
+   "accession": "GSE6535",
+   "role": "other",
+   "n_used": null
+  },
+  {
+   "accession": "GSE12624",
+   "role": "other",
+   "n_used": null
+  },
+  {
+   "accession": "GSE54514",
+   "role": "other",
+   "n_used": null
+  },
+  {
+   "accession": "GSE63042",
+   "role": "other",
+   "n_used": null
+  },
+  {
+   "accession": "GSE67652",
+   "role": "other",
+   "n_used": null
+  },
+  {
+   "accession": "GSE69528",
+   "role": "other",
+   "n_used": null
+  },
+  {
+   "accession": "GSE74224",
+   "role": "other",
+   "n_used": null
+  }
+ ],
+ "notes": "Training n=240 / internal validation n=239 random 1:1 split of GSE65682. Meta-analysis of gene expression (sepsis vs control) used GSE28750, GSE6535 (as printed; possibly a typo), GSE12624, GSE54514, GSE63042, GSE67652, GSE69528, GSE74224, GSE95233 -> GSE63042 and GSE54514 used (expression only, not for the score). Single-gene prognostic validation via BIDOS database (underlying GEO cohorts not named)."
+}

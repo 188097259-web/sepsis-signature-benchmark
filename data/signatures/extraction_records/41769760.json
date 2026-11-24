@@ -1,0 +1,81 @@
+{
+ "pmid": "41769760",
+ "pmcid": null,
+ "first_author": "Li X",
+ "year": "2026",
+ "journal": "Shock",
+ "title": "Identification of Molecular Subtypes and Prognostic Characteristics in Sepsis Based on T-Helper 17 Cell Differentiation-Related Genes.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "LiX2026_Th17_8gene",
+   "model_type": "linear_cox",
+   "purpose": "mortality",
+   "outcome_definition": "28-day survival",
+   "genes": [
+    {
+     "symbol": "DENND2D",
+     "coef": -0.4093,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CD74",
+     "coef": -0.3145,
+     "direction": "protective"
+    },
+    {
+     "symbol": "BCL11A",
+     "coef": 0.7444,
+     "direction": "risk"
+    },
+    {
+     "symbol": "FCER1A",
+     "coef": -0.1317,
+     "direction": "protective"
+    },
+    {
+     "symbol": "LTB",
+     "coef": -0.5097,
+     "direction": "protective"
+    },
+    {
+     "symbol": "TGFBI",
+     "coef": -0.1634,
+     "direction": "protective"
+    },
+    {
+     "symbol": "ERAP2",
+     "coef": -0.0948,
+     "direction": "protective"
+    },
+    {
+     "symbol": "VSIG4",
+     "coef": 0.0684,
+     "direction": "risk"
+    }
+   ],
+   "n_genes": 8,
+   "verbatim_formula": "Risk score = -0.4093xDENND2D -0.3145xCD74 +0.7444xBCL11A -0.1317xFCER1A -0.5097xLTB -0.1634xTGFBI -0.0948xERAP2 +0.0684xVSIG4",
+   "higher_score_means": "higher risk",
+   "cutoff": "median",
+   "source_location": "Results",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training/internal_validation"
+  },
+  {
+   "accession": "GSE95233",
+   "role": "external_validation"
+  },
+  {
+   "accession": "GSE28750",
+   "role": "other"
+  }
+ ],
+ "notes": "Full PDF read 2026-11-10."
+}

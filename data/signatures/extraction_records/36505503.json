@@ -1,0 +1,156 @@
+{
+ "pmid": "36505503",
+ "pmcid": "PMC9732458",
+ "first_author": "Zhou W",
+ "year": "2022",
+ "journal": "Front Immunol",
+ "title": "Identification of two robust subclasses of sepsis with both prognostic and therapeutic values based on machine learning analysis.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Zhou2022_7geneLogistic",
+   "model_type": "linear_logistic",
+   "purpose": "mortality",
+   "outcome_definition": "survivor vs non-survivor (28-day in E-MTAB-4451/GSE65682/GSE95233/E-MTAB-4421/E-MTAB-7581; in-hospital death with uncertain cutoff in GSE185263)",
+   "genes": [
+    {
+     "symbol": "ASPH",
+     "coef": 0.44698,
+     "direction": "risk"
+    },
+    {
+     "symbol": "IL1R2",
+     "coef": 0.31377,
+     "direction": "risk"
+    },
+    {
+     "symbol": "ITK",
+     "coef": 0.35287,
+     "direction": "risk"
+    },
+    {
+     "symbol": "LIN7A",
+     "coef": 0.30715,
+     "direction": "risk"
+    },
+    {
+     "symbol": "NLRC4",
+     "coef": -0.64651,
+     "direction": "protective"
+    },
+    {
+     "symbol": "NSUN7",
+     "coef": -0.47867,
+     "direction": "protective"
+    },
+    {
+     "symbol": "PLEKHA1",
+     "coef": -0.88306,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 7,
+   "verbatim_formula": "risk score=log{0.941*sum_1^n(coef_i x exp_i)}",
+   "higher_score_means": "higher risk",
+   "expression_scale_used": "merged GEO/ArrayExpress data, probe-mean gene symbols, batch-corrected with sva/ComBat across cohorts (exact scale unclear)",
+   "cutoff": null,
+   "reported_performance": "Risk score AUC 0.666 (training, n=980) and 0.608 (validation, n=760); 28d-cutoff cohorts AUC 0.681 training / 0.603 validation; GSE185263 AUC 0.616; GSE95233 0.626. Multivariable OR 2.704 (training), 2.007 (validation).",
+   "source_location": "Methods 'Development of signature related to sepsis survival'; Results 'Risk score construction'; Figure 6C; Supplementary Table S7 (coefficients)",
+   "released_code_or_model": null
+  },
+  {
+   "model_id": "Zhou2022_KmeansAdaptiveInflammatory",
+   "model_type": "subtype_clustering",
+   "purpose": "subtype",
+   "outcome_definition": "Adaptive vs Inflammatory subtype; Inflammatory associated with higher mortality in training set",
+   "genes": [],
+   "n_genes": 0,
+   "verbatim_formula": "",
+   "higher_score_means": "unclear",
+   "expression_scale_used": "sva-corrected merged expression of 90 sepsis-related DEGs",
+   "cutoff": "K-means k=2",
+   "reported_performance": "Training clusters: dead 94/442 (A) vs 145/538 (B), chi-square P=0.044 (Table S5)",
+   "source_location": "Methods 'K-means clustering analysis'; Results; Table S5",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "E-MTAB-4451",
+   "role": "training",
+   "n_used": 106
+  },
+  {
+   "accession": "GSE54514",
+   "role": "training",
+   "n_used": 163
+  },
+  {
+   "accession": "GSE57065",
+   "role": "DEG_screening",
+   "n_used": 107
+  },
+  {
+   "accession": "GSE65682",
+   "role": "training",
+   "n_used": 801
+  },
+  {
+   "accession": "GSE131761",
+   "role": "training",
+   "n_used": 129
+  },
+  {
+   "accession": "GSE134347",
+   "role": "DEG_screening",
+   "n_used": 238
+  },
+  {
+   "accession": "GSE185263",
+   "role": "training",
+   "n_used": 392
+  },
+  {
+   "accession": "E-MTAB-7581",
+   "role": "external_validation",
+   "n_used": 176
+  },
+  {
+   "accession": "GSE13015",
+   "role": "external_validation",
+   "n_used": 29
+  },
+  {
+   "accession": "GSE95233",
+   "role": "external_validation",
+   "n_used": 98
+  },
+  {
+   "accession": "E-MTAB-5273",
+   "role": "external_validation",
+   "n_used": 221
+  },
+  {
+   "accession": "GSE33341",
+   "role": "external_validation",
+   "n_used": 93
+  },
+  {
+   "accession": "E-MTAB-4421",
+   "role": "external_validation",
+   "n_used": 265
+  },
+  {
+   "accession": "GSE110487",
+   "role": "other",
+   "n_used": 62
+  },
+  {
+   "accession": "GSE151263",
+   "role": "scRNA",
+   "n_used": 4
+  }
+ ],
+ "notes": "Formula in Methods literally reads risk score=log{0.941*sum(coef x exp)}; constant 0.941 and log unexplained. Coefficients from Table S7 (logistic). Text ORs: ITK OR 1.423 (risk) consistent with positive coef. Discovery for WGCNA/clustering = 7 cohorts (GSE54514, GSE57065, GSE65682, GSE131761, E-MTAB-4451, GSE185263, GSE134347); risk-score training listed as GSE54514, E-MTAB-4451, GSE65682, GSE185263, GSE131761 (abstract says four datasets, n=980). Subtype validation: E-MTAB-7581, GSE13015(GPL6947), GSE95233, E-MTAB-5273, GSE33341. GSE110487 used for therapy-response analysis. The 90 clustering genes are not listed in text (no full gene list for the subtype model). GSE185263, GSE54514, GSE65682, GSE95233 all used -> ineligible for evaluating this model."
+}

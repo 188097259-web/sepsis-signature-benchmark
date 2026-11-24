@@ -1,0 +1,7 @@
+.DS_Store
+Rplots.pdf
+results_dryrun/
+figures/
+data/external/LM22.txt
+data/cmaise/*
+!data/cmaise/README.md

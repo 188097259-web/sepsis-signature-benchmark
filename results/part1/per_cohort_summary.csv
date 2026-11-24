@@ -1,0 +1,4 @@
+cohort,n_published,n_below_random_median,n_gt95,n_auc_lt050
+GSE185263,33,23,0,1
+GSE63042,28,16,1,6
+GSE236713,35,19,1,13

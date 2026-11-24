@@ -1,0 +1,40 @@
+{
+  "pmid": "39384856", "pmcid": "PMC11464784", "first_author": "Shen L", "year": "2024", "journal": "Sci Rep",
+  "title": "Key platelet genes play important roles in predicting the prognosis of sepsis.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Shen2024_platelet10",
+      "model_type": "linear_cox",
+      "purpose": "survival",
+      "outcome_definition": "28-day overall survival (1/2/3-week time-dependent ROC)",
+      "genes": [
+        {"symbol": "PPDPF", "coef": 1.0386, "direction": "risk"},
+        {"symbol": "RPL11", "coef": 1.1036, "direction": "risk"},
+        {"symbol": "FOS", "coef": 0.5560, "direction": "risk"},
+        {"symbol": "SAT1", "coef": 2.4801, "direction": "risk"},
+        {"symbol": "CTSW", "coef": -0.8606, "direction": "protective"},
+        {"symbol": "MAP3K7", "coef": -0.3117, "direction": "protective"},
+        {"symbol": "GIMAP4", "coef": -0.5125, "direction": "protective"},
+        {"symbol": "CD36", "coef": -0.2937, "direction": "protective"},
+        {"symbol": "CD93", "coef": -0.3848, "direction": "protective"},
+        {"symbol": "TNFSF10", "coef": -0.9004, "direction": "protective"}
+      ],
+      "n_genes": 10,
+      "verbatim_formula": "risk score = PPDPF * 1.0386 + RPL11 * 1.1036 + FOS * 0.5560 + SAT1 * 2.4801 + CTSW * (-0.8606) + MAP3K7 * (-0.3117) + GIMAP4 * (-0.5125) + CD36 * (-0.2937) + CD93 * (-0.3848) + TRAIL * (-0.9004)",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "GSE65682 GEO expression values (transformation not stated)",
+      "cutoff": "median risk score",
+      "reported_performance": "GSE65682 training (n=287): tdAUC 0.88/0.84/0.83 at 1/2/3 weeks; validation (n=192): 'similar' (values only in Figure 7f)",
+      "source_location": "Methods 'Construction of prognostic model' + Results 'Screening of key prognostic genes' (formula) + Figure 7",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 287},
+    {"accession": "GSE65682", "role": "internal_validation", "n_used": 192},
+    {"accession": "GSE28750", "role": "DEG_screening", "n_used": 41},
+    {"accession": "GSE175453", "role": "scRNA", "n_used": 9}
+  ],
+  "notes": "Paper writes 'TRAIL' in formula; mapped to official symbol TNFSF10. Coefficients from final multivariate Cox after CoxBoost+LASSO selection among 90 algorithm combinations (training split 6:4 of 479 GSE65682 patients). Very high training AUCs suggest overfitting. Validation AUCs not stated in text."
+}

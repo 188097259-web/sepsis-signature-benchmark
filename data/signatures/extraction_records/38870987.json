@@ -1,0 +1,83 @@
+{
+ "pmid": "38870987",
+ "pmcid": null,
+ "first_author": "Jiang J",
+ "year": "2024",
+ "journal": "Horm Metab Res",
+ "title": "Prediction of Prognosis in Patients with Sepsis Based on Platelet-Related Genes.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Jiang2024_PRG10",
+   "model_type": "linear_cox",
+   "purpose": "mortality",
+   "outcome_definition": "28-day survival",
+   "genes": [
+    {
+     "symbol": "SOS1",
+     "coef": -2.7489,
+     "direction": "protective"
+    },
+    {
+     "symbol": "JUN",
+     "coef": 1.3361,
+     "direction": "risk"
+    },
+    {
+     "symbol": "TEX264",
+     "coef": -0.6444,
+     "direction": "protective"
+    },
+    {
+     "symbol": "ARRB2",
+     "coef": -2.5257,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CSK",
+     "coef": 1.2644,
+     "direction": "risk"
+    },
+    {
+     "symbol": "LCK",
+     "coef": -0.8278,
+     "direction": "protective"
+    },
+    {
+     "symbol": "F13A1",
+     "coef": -0.6911,
+     "direction": "protective"
+    },
+    {
+     "symbol": "F5",
+     "coef": -0.4246,
+     "direction": "protective"
+    },
+    {
+     "symbol": "TAGLN2",
+     "coef": -1.1147,
+     "direction": "protective"
+    },
+    {
+     "symbol": "GAS6",
+     "coef": -1.2174,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 10,
+   "verbatim_formula": "coef = ln(HR) from multivariate Cox forest plot (Fig 2c); HR printed to 3 significant digits",
+   "higher_score_means": "higher risk",
+   "cutoff": "median",
+   "source_location": "Fig 2c",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training"
+  }
+ ],
+ "notes": "Full PDF read 2026-11-10. Formula itself missing from extracted text; coefficients derived from printed HRs (approximate). Training N=328, 75 events."
+}

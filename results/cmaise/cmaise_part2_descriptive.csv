@@ -1,0 +1,12 @@
+item,value
+median_adj_r2_lm22,0.156494336188435
+median_adj_r2_lm22_basic_lo,0.0773987796671848
+median_adj_r2_lm22_basic_hi,0.151521425105194
+median_adj_r2_marker,0.206716188442969
+published_median_raw,0.572986470433076
+published_median_adj,0.559161919448957
+random_median_raw,0.588641113163701
+random_median_adj,0.568033453275216
+tnlr_pooled_auc,0.516858861806539
+tnlr_pooled_lo,0.43163642622019
+tnlr_pooled_hi,0.60111178981954

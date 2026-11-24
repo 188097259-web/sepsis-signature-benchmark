@@ -1,0 +1,136 @@
+{
+ "pmid": "41268065",
+ "pmcid": "PMC12628821",
+ "first_author": "Zhou C",
+ "year": "2025",
+ "journal": "Immunotargets Ther",
+ "title": "Multi-Dimensional Characterization of Programmed Cell Death Patterns for Prognostic Stratification and Therapeutic Insights in Sepsis.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Zhou2025_PCD7",
+   "model_type": "lasso_linear",
+   "purpose": "survival",
+   "outcome_definition": "survival in GSE65682 (28-day follow-up); time-ROC at 4/7/14/21 d",
+   "genes": [
+    {
+     "symbol": "ELANE",
+     "coef": 0.36917,
+     "direction": "risk"
+    },
+    {
+     "symbol": "CTSG",
+     "coef": 0.22875,
+     "direction": "risk"
+    },
+    {
+     "symbol": "MPO",
+     "coef": -0.46844,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CAMP",
+     "coef": -0.31068,
+     "direction": "protective"
+    },
+    {
+     "symbol": "TFRC",
+     "coef": 0.28079,
+     "direction": "risk"
+    },
+    {
+     "symbol": "IL1B",
+     "coef": 0.10971,
+     "direction": "risk"
+    },
+    {
+     "symbol": "CASP5",
+     "coef": -0.14144,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 7,
+   "verbatim_formula": "risk score = ELANE*0.36917+CTSG*0.22875+MPO*(-0.46844)+CAMP*(-0.31068)+TFRC*(0.28079)+IL1B*(0.10971)+CASP5*(-0.14144)",
+   "higher_score_means": "higher risk",
+   "expression_scale_used": "GEO processed microarray (limma-normalized); scale not further specified",
+   "cutoff": "median risk score",
+   "reported_performance": "GSE65682 time-AUC 0.768/0.747/0.714/0.682 at 4/7/14/21 d; external: higher in non-survivors (GSE48080, GSE26440, GSE106878/GSE33119), boxplots only",
+   "source_location": "Results 'Construction of a PCD-related prognostic model' + Fig. 3C",
+   "released_code_or_model": null
+  },
+  {
+   "model_id": "Zhou2025_PCDcluster",
+   "model_type": "subtype_clustering",
+   "purpose": "subtype",
+   "outcome_definition": "Consensus clusters on prognostic PCD pattern activity scores; Cluster 1 worse survival",
+   "genes": [],
+   "n_genes": 0,
+   "verbatim_formula": "",
+   "higher_score_means": "unclear",
+   "expression_scale_used": "ssGSEA/GSVA scores of 14 PCD gene sets (from a previous study)",
+   "cutoff": "k=2",
+   "reported_performance": "KM difference (figure only)",
+   "source_location": "Methods 'Consensus Clustering'; Fig. 1",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training",
+   "n_used": 760
+  },
+  {
+   "accession": "GSE48080",
+   "role": "external_validation",
+   "n_used": 13
+  },
+  {
+   "accession": "GSE28750",
+   "role": "external_validation",
+   "n_used": 41
+  },
+  {
+   "accession": "GSE57065",
+   "role": "external_validation",
+   "n_used": 82
+  },
+  {
+   "accession": "GSE26440",
+   "role": "external_validation",
+   "n_used": 130
+  },
+  {
+   "accession": "GSE106878",
+   "role": "external_validation",
+   "n_used": 84
+  },
+  {
+   "accession": "GSE33119",
+   "role": "external_validation",
+   "n_used": 20
+  },
+  {
+   "accession": "GSE167363",
+   "role": "scRNA",
+   "n_used": null
+  },
+  {
+   "accession": "GSE175453",
+   "role": "scRNA",
+   "n_used": null
+  },
+  {
+   "accession": "GSE224127",
+   "role": "other",
+   "n_used": null
+  },
+  {
+   "accession": "GSE248904",
+   "role": "other",
+   "n_used": null
+  }
+ ],
+ "notes": "LASSO-Cox then multivariate Cox (coxph) per Methods; formula coefficients as printed. Subtype model is based on PCD gene-set scores, gene list not given in paper (from ref 34) -> genes empty. GSE26440 is pediatric. GSE224127/GSE248904 are mouse LPS datasets. Accessions printed with appended reference numbers in XML (e.g. GSE16736339 = GSE167363 ref 39)."
+}

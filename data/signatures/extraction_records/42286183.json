@@ -1,0 +1,76 @@
+{
+ "pmid": "42286183",
+ "pmcid": null,
+ "first_author": "Wang M",
+ "year": "2026",
+ "journal": "Funct Integr Genomics",
+ "title": "Systematic characterization of pyroptosis-related gene patterns identifies potential prognostic inflammatory phenotypes in sepsis.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Wang2026_PRGscore7",
+   "model_type": "linear_cox",
+   "purpose": "mortality",
+   "outcome_definition": "7/14/21-day survival",
+   "genes": [
+    {
+     "symbol": "TUBG2",
+     "coef": 0.4517,
+     "direction": "risk"
+    },
+    {
+     "symbol": "TNFAIP3",
+     "coef": 0.4464,
+     "direction": "risk"
+    },
+    {
+     "symbol": "CXCL8",
+     "coef": 0.2274,
+     "direction": "risk"
+    },
+    {
+     "symbol": "WFDC1",
+     "coef": 0.2026,
+     "direction": "risk"
+    },
+    {
+     "symbol": "DEFA4",
+     "coef": 0.1806,
+     "direction": "risk"
+    },
+    {
+     "symbol": "CX3CR1",
+     "coef": -0.2532,
+     "direction": "protective"
+    },
+    {
+     "symbol": "ZBP1",
+     "coef": -0.5104,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 7,
+   "verbatim_formula": "Table 1 multivariate Cox coefficients (text formula prints TUBG2 0.4516)",
+   "higher_score_means": "higher risk",
+   "cutoff": "median",
+   "source_location": "Table 1",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training/test"
+  },
+  {
+   "accession": "GSE95233",
+   "role": "external_validation"
+  },
+  {
+   "accession": "GSE167363",
+   "role": "scRNA"
+  }
+ ],
+ "notes": "Full PDF read 2026-11-10."
+}

@@ -1,0 +1,11 @@
+item,value
+n_scored,36
+n_gt95,3
+n_lt05,7
+n_below_random_median,18
+median_percentile,0.5
+spearman_vs_main,0.294485249191099
+spearman_vs_cmaise,0.13301565474393
+n_gt95_main_and_replication,0
+n_gt95_in_two_or_more_of_three,0
+n_gt95_in_all_three,0

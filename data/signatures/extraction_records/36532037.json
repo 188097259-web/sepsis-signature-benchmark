@@ -1,0 +1,55 @@
+{
+  "pmid": "36532037", "pmcid": "PMC9756843", "first_author": "Zheng Y", "year": "2022", "journal": "Front Immunol",
+  "title": "Construction and validation of a robust prognostic model based on immune features in sepsis.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Zheng2022_IRG22",
+      "model_type": "linear_cox",
+      "purpose": "mortality",
+      "outcome_definition": "28-day mortality",
+      "genes": [
+        {"symbol": "ADRB2", "coef": -0.693479, "direction": "protective"},
+        {"symbol": "CD1D", "coef": -0.394755, "direction": "protective"},
+        {"symbol": "CD74", "coef": 0.7029737, "direction": "risk"},
+        {"symbol": "CETP", "coef": -1.176492, "direction": "protective"},
+        {"symbol": "ELANE", "coef": 0.3804079, "direction": "risk"},
+        {"symbol": "FYN", "coef": 0.4151731, "direction": "risk"},
+        {"symbol": "GNLY", "coef": -0.244232, "direction": "protective"},
+        {"symbol": "HLA-DRA", "coef": -0.761003, "direction": "protective"},
+        {"symbol": "IL16", "coef": 1.0580916, "direction": "risk"},
+        {"symbol": "IL17RA", "coef": -0.54816, "direction": "protective"},
+        {"symbol": "IL1R2", "coef": 0.2860863, "direction": "risk"},
+        {"symbol": "LTB", "coef": -0.651796, "direction": "protective"},
+        {"symbol": "MPO", "coef": -0.615383, "direction": "protective"},
+        {"symbol": "PLXNC1", "coef": -0.488971, "direction": "protective"},
+        {"symbol": "PSME1", "coef": 0.7359292, "direction": "risk"},
+        {"symbol": "TAP2", "coef": -0.386602, "direction": "protective"},
+        {"symbol": "TFRC", "coef": 0.1729455, "direction": "risk"},
+        {"symbol": "THBS1", "coef": 0.3465734, "direction": "risk"},
+        {"symbol": "TNFRSF10B", "coef": 0.7411038, "direction": "risk"},
+        {"symbol": "TNFSF12", "coef": -0.898271, "direction": "protective"},
+        {"symbol": "TRBV9", "coef": -0.336649, "direction": "protective"},
+        {"symbol": "DEFA4", "coef": 0.1906303, "direction": "risk"}
+      ],
+      "n_genes": 22,
+      "verbatim_formula": "risk score = sum(coef_i x expression_i) over 22 DEIRGs (formula itself given in Supplementary Table 7, not downloaded)",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "unclear (GSE65682 series matrix; limma used for DEGs; no explicit transformation stated)",
+      "cutoff": "median risk score in training set (239 high / 240 low)",
+      "reported_performance": "Training GSE65682 (n=479 sepsis): 28-day mortality AUC 0.879 (survivalROC), KM P=1.105e-13. External: E-MTAB-4451 AUC 0.805; E-MTAB-5273 0.783; E-MTAB-5274 0.913; GSE95233 0.917; GSE106878 0.796; GSE63042 0.915",
+      "source_location": "Results 'Construction of prognostic model' + Table 2 (multivariate Cox coef/HR); Figure 5-6",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 479},
+    {"accession": "GSE63042", "role": "external_validation", "n_used": 129},
+    {"accession": "GSE95233", "role": "external_validation", "n_used": 124},
+    {"accession": "GSE106878", "role": "external_validation", "n_used": 94},
+    {"accession": "E-MTAB-4451", "role": "external_validation", "n_used": 106},
+    {"accession": "E-MTAB-5273", "role": "external_validation", "n_used": 221},
+    {"accession": "E-MTAB-5274", "role": "external_validation", "n_used": 106}
+  ],
+  "notes": "Coefficients are multivariate Cox coefs from Table 2 (several with p>0.05 retained). Discussion lists MPO as a high-risk gene but Table 2 coef for MPO is negative (-0.615); Table 2 value recorded. Validation n_used is the 'total patients' column of Table 1 (exact n analysed per validation set not stated). Methods text misprints GSE63042 as 'GSE63062'; Figure 2A caption misprints GSE66890. Training n=479 sepsis patients of GSE65682 (DEGs computed in GSE65682 sepsis vs control). Nomogram also combined genes with clinical features (age etc.), not recorded as a separate model."
+}

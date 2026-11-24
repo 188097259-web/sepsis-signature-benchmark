@@ -1,0 +1,52 @@
+{
+  "pmid": "38979432", "pmcid": "PMC11228080", "first_author": "Zhang J", "year": "2024", "journal": "J Inflamm Res",
+  "title": "Cuproptosis-Related Genes as Prognostic Biomarkers for Sepsis: Insights into Immune Function and Personalized Immunotherapy.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Zhang2024_cuproptosis3",
+      "model_type": "linear_cox",
+      "purpose": "survival",
+      "outcome_definition": "28-day survival (7/14/28-day time-dependent ROC)",
+      "genes": [
+        {"symbol": "LIAS", "coef": -2.64, "direction": "protective"},
+        {"symbol": "PDHA1", "coef": -3.10, "direction": "risk"},
+        {"symbol": "PDHB", "coef": -2.82, "direction": "protective"}
+      ],
+      "n_genes": 3,
+      "verbatim_formula": "CuRGs risk score = LIAS x (-2.64) + PDHA1 x (-3.10) + PDHB x (-2.82)",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "GSE65682 expression after sva normalization (scale not stated)",
+      "cutoff": "median CuRGs score (Results); Methods say optimal survival cutoff",
+      "reported_performance": "Whole GSE65682 (n=479) tdAUC 0.733/0.652/0.662 at 7/14/28 d; random 1:1 split training (n=240) 0.731/0.662/0.694; validation (n=239) 0.732/0.641/0.628; multivariate Cox HR 1.393",
+      "source_location": "Methods 'Construction of CuRGs Risk Model' (formula) + Results Figures 2-3",
+      "released_code_or_model": null
+    },
+    {
+      "model_id": "Zhang2024_cuproptosis_clusters",
+      "model_type": "subtype_clustering",
+      "purpose": "subtype",
+      "outcome_definition": "Consensus clusters A/B/C (k=3) compared for 28-day survival; B best",
+      "genes": [
+        {"symbol": "LIAS", "coef": null, "direction": "null"},
+        {"symbol": "PDHA1", "coef": null, "direction": "null"},
+        {"symbol": "PDHB", "coef": null, "direction": "null"}
+      ],
+      "n_genes": 3,
+      "verbatim_formula": null,
+      "higher_score_means": "unclear",
+      "expression_scale_used": "unclear",
+      "cutoff": "ConsensusClusterPlus k=3 (no transferable assignment rule)",
+      "reported_performance": "KM 28-day survival difference across clusters in GSE65682 (Figure 5B); no AUC",
+      "source_location": "Results 'Consensus Clustering Subtypes Analysis' + Figure 5",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 479},
+    {"accession": "GSE65682", "role": "internal_validation", "n_used": 239},
+    {"accession": "GSE65682", "role": "DEG_screening", "n_used": 521},
+    {"accession": "GSE167363", "role": "scRNA", "n_used": 7}
+  ],
+  "notes": "INTERNAL CONTRADICTION: formula gives PDHA1 a negative coefficient (-3.10), but text says multivariate Cox showed PDHA1 is a risk factor and PDHA1 is higher in the high-score group; with all-negative coefficients the stated directions cannot all hold. Coefficients recorded exactly as printed; PDHA1 direction recorded as 'risk' per text; sign of PDHA1 coefficient is suspect. Model fit on all 479 GSE65682 patients, then split 1:1 only for evaluation (not true held-out). Clustering methods mention 'DE-CuRGs' but Results say clustering used the 3 key genes. Text also writes 'GSE65862' and 'PDHH1' (typos)."
+}

@@ -1,0 +1,32 @@
+{
+  "pmid": "40922367", "pmcid": "PMC12419263", "first_author": "Zeng Y", "year": "2025", "journal": "Medicine (Baltimore)",
+  "title": "Identification of a 3-gene signature predicting 28-day mortality for sepsis.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Zeng2025_3gene",
+      "model_type": "lasso_linear",
+      "purpose": "mortality",
+      "outcome_definition": "28-day mortality / 28-day overall survival",
+      "genes": [
+        {"symbol": "MPEG1", "coef": -0.119, "direction": "protective"},
+        {"symbol": "CX3CR1", "coef": -0.230, "direction": "protective"},
+        {"symbol": "HLA-DRB1", "coef": -0.046, "direction": "protective"}
+      ],
+      "n_genes": 3,
+      "verbatim_formula": "k score = (-0.119 × MPEG1) + (-0.230 × CX3CR1) + (-0.046 × HLA-DRB1)",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "GSE65682 GEO series values (likely log2; training median score = -2.530256 is consistent with log2-scale input)",
+      "cutoff": "median risk score; training-set median = -2.530256",
+      "reported_performance": "28-day AUC: GSE65682 training (n=240) 0.66; test (n=239) 0.65; whole (n=479) 0.66; multivariable Cox HR 5.74 (training)",
+      "source_location": "Methods 2.4 formula + Results 3.3 (coefficients and median cutoff) + Figure 5",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 240},
+    {"accession": "GSE65682", "role": "internal_validation", "n_used": 239},
+    {"accession": "GSE131761", "role": "other", "n_used": null}
+  ],
+  "notes": "WGCNA on 479 GSE65682 patients with 28-day outcome; random 1:1 split. Methods say coefficients come from multivariate Cox but Results attribute the 3-gene model to LASSO; recorded as lasso_linear. Paper states platform 'GPL13367' (typo for GPL13667). GSE131761 appears only in a figure legend (probably copy error) - listed as 'other' to be conservative."
+}

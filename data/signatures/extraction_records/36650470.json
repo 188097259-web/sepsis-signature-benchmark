@@ -1,0 +1,36 @@
+{
+  "pmid": "36650470", "pmcid": "PMC9843880", "first_author": "Chen ZH", "year": "2023", "journal": "BMC Bioinformatics",
+  "title": "A signature of immune-related genes correlating with clinical prognosis and immune microenvironment in sepsis.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Chen2023_IRG7",
+      "model_type": "linear_cox",
+      "purpose": "survival",
+      "outcome_definition": "28-day survival",
+      "genes": [
+        {"symbol": "CCL5", "coef": -0.465, "direction": "protective"},
+        {"symbol": "DEFA4", "coef": 0.215, "direction": "risk"},
+        {"symbol": "NFYC", "coef": -1.487, "direction": "protective"},
+        {"symbol": "ESR1", "coef": 1.055, "direction": "risk"},
+        {"symbol": "TNFRSF8", "coef": -0.737, "direction": "protective"},
+        {"symbol": "CX3CR1", "coef": -0.228, "direction": "protective"},
+        {"symbol": "SERPINA3", "coef": 1.003, "direction": "risk"}
+      ],
+      "n_genes": 7,
+      "verbatim_formula": "risk score = -0.465 x CCL5 + 0.215 x DEFA4 - 1.487 x NFYC + 1.055 x ESR1 - 0.737 x TNFRSF8 - 0.228 x CX3CR1 + 1.003 x SERPINA3",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "z-score standardized expression (Methods: EXPgene standardized by Z score); data batch-corrected before modelling",
+      "cutoff": "median risk score",
+      "reported_performance": "GSE65682 training half (n=239): AUC 0.876 (95% CI 0.793-0.946), C-index 0.78; GSE65682 validation half (n=239): AUC 0.855 (0.781-0.932); external E-MTAB-4451 (n=106): AUC 0.815",
+      "source_location": "Methods 'Construction and validation of the IRG signature' + Results paragraph with formula; Table 2 (AIC stepwise)",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 239},
+    {"accession": "GSE65682", "role": "internal_validation", "n_used": 239},
+    {"accession": "E-MTAB-4451", "role": "external_validation", "n_used": 106}
+  ],
+  "notes": "478 GSE65682 sepsis patients with survival data split 1:1 randomly. Univariate Cox -> LASSO Cox (20 genes) -> multivariable Cox with stepwise AIC (7 genes). Coefficients from multivariable Cox as printed in Results text. Paper calls GSE65682 'RNA-seq' (it is an array dataset) and mentions batch correction with PCA; supplementary Fig S2 caption misprints NFYC as 'NFY4'. Supplementary Table S4 (xlsx, not downloaded) also lists the 7 genes."
+}

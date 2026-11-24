@@ -1,0 +1,96 @@
+{
+ "pmid": "41868226",
+ "pmcid": "PMC12999399",
+ "first_author": "Li F",
+ "year": "2026",
+ "journal": "Front Med (Lausanne)",
+ "title": "Development of a prognostic model for sepsis based on gut microbiota-associated genes and identification of potential targets.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Li2026_GMGscore6",
+   "model_type": "lasso_linear",
+   "purpose": "mortality",
+   "outcome_definition": "28-day mortality",
+   "genes": [
+    {
+     "symbol": "ASPM",
+     "coef": 0.330198110727578,
+     "direction": "risk"
+    },
+    {
+     "symbol": "CYP1A2",
+     "coef": 0.0282546140065459,
+     "direction": "risk"
+    },
+    {
+     "symbol": "FFAR2",
+     "coef": -0.172730479171484,
+     "direction": "protective"
+    },
+    {
+     "symbol": "IL4R",
+     "coef": -0.0804154795959829,
+     "direction": "protective"
+    },
+    {
+     "symbol": "MUC1",
+     "coef": 0.659236121762074,
+     "direction": "risk"
+    },
+    {
+     "symbol": "RORA",
+     "coef": -0.167410414798694,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 6,
+   "verbatim_formula": "GMGscore = sum(Exp_i x Coef_i), Exp_i = standardized expression",
+   "higher_score_means": "higher risk",
+   "expression_scale_used": "standardized (z-scored) gene expression per Methods",
+   "cutoff": "median GMGscore",
+   "reported_performance": "AUC 0.903 training (GSE65682); AUC 0.901 validation (GSE95233); nomogram (age + GMGscore) AUC 0.907",
+   "source_location": "Methods (GMGscore formula); Results Fig. 3; Supplementary Table S4 (sheet TableS4_LASSO, LASSO coefficients)",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE154918",
+   "role": "DEG_screening",
+   "n_used": 60
+  },
+  {
+   "accession": "GSE65682",
+   "role": "training",
+   "n_used": 479
+  },
+  {
+   "accession": "GSE95233",
+   "role": "external_validation",
+   "n_used": 102
+  },
+  {
+   "accession": "GSE28750",
+   "role": "other",
+   "n_used": 30
+  },
+  {
+   "accession": "GSE9960",
+   "role": "other",
+   "n_used": 70
+  },
+  {
+   "accession": "GSE243219",
+   "role": "other",
+   "n_used": 32
+  },
+  {
+   "accession": "GSE167363",
+   "role": "scRNA",
+   "n_used": 12
+  }
+ ],
+ "notes": "Coefficients from Supplementary Table S4 (LASSO coefficients at lambda=0.01; no separate multivariate Cox refit reported). DEG dataset printed variously as GSE154918/GSE154928/GSE154981 in the text; Supplementary Table S1 confirms GSE154918. GSE95233 n=102 sepsis samples (includes repeated sampling per patient). AUC metric (ROC for 28-day mortality, not time-dependent) as reported."
+}

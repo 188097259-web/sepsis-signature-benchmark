@@ -1,0 +1,36 @@
+{
+  "pmid": "38281996", "pmcid": "PMC10822872", "first_author": "Wang Y", "year": "2024", "journal": "Sci Rep",
+  "title": "A novel anoikis-related gene signature predicts prognosis in patients with sepsis and reveals immune infiltration.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Wang2024_anoikis4",
+      "model_type": "linear_cox",
+      "purpose": "survival",
+      "outcome_definition": "28-day survival (7/14/28-day ROC)",
+      "genes": [
+        {"symbol": "CFLAR", "coef": -1.170279908, "direction": "protective"},
+        {"symbol": "TP53", "coef": -1.37242248, "direction": "protective"},
+        {"symbol": "FASLG", "coef": -0.909225002, "direction": "protective"},
+        {"symbol": "CXCL8", "coef": 0.154752771, "direction": "risk"}
+      ],
+      "n_genes": 4,
+      "verbatim_formula": "Prognostic Risk Model = -1.170279908×CFLAR - 1.37242248×TP53 - 0.909225002×FASLG + 0.154752771×CXCL8",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "GSE65682 GEO expression values (transformation not stated)",
+      "cutoff": "median risk score",
+      "reported_performance": "GSE65682 training (n=240): tdAUC >0.65 at 7/14/28 d (highest at 7 d), exact values only in figure; validation group KM significant, AUC values only in figure",
+      "source_location": "Methods 'Construction of risk model' + Results 'Prognostic risk score model' formula + Figures 6-8",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 240},
+    {"accession": "GSE65682", "role": "internal_validation", "n_used": null},
+    {"accession": "GSE57065", "role": "DEG_screening", "n_used": 107},
+    {"accession": "GSE28750", "role": "DEG_screening", "n_used": null},
+    {"accession": "GSE134358", "role": "other", "n_used": null},
+    {"accession": "GSE58294", "role": "other", "n_used": null}
+  ],
+  "notes": "Training = GSE65682 training split (240 of 479; split method not stated); Methods say validation in the GSE65682 validation group, but Results section heading text names the validation dataset 'GSE58294' (likely an error; listed as 'other' to be conservative). Coefficients are multivariate Cox after LASSO. Results text contains a contradictory sentence (low-risk group survival 'lower') but KM and later text indicate low-risk = better survival; CXCL8 HR>1, others HR<1. GSE28750 used to validate DEARGs (diagnostic); GSE134358 miRNA network. Exact AUCs not in text."
+}

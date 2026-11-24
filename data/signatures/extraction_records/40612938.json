@@ -1,0 +1,38 @@
+{
+  "pmid": "40612938", "pmcid": "PMC12221935", "first_author": "Li C", "year": "2025", "journal": "Front Immunol",
+  "title": "A novel, rapid, and practical prognostic model for sepsis patients based on dysregulated immune cell lactylation.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Li2025_Lactylation8",
+      "model_type": "linear_cox",
+      "purpose": "mortality",
+      "outcome_definition": "28-day mortality / survival (time ROC at 3, 14, 28 days)",
+      "genes": [
+        {"symbol": "PPP1R15A", "coef": 0.665, "direction": "risk"},
+        {"symbol": "CDCA7", "coef": 0.406, "direction": "risk"},
+        {"symbol": "FAM3A", "coef": 0.761, "direction": "risk"},
+        {"symbol": "CD160", "coef": -0.947, "direction": "protective"},
+        {"symbol": "PIP5K1C", "coef": -0.997, "direction": "protective"},
+        {"symbol": "SRPRA", "coef": -0.660, "direction": "protective"},
+        {"symbol": "ING4", "coef": -0.783, "direction": "protective"},
+        {"symbol": "HELB", "coef": -0.573, "direction": "protective"}
+      ],
+      "n_genes": 8,
+      "verbatim_formula": "risk score = sum(multivariate Cox coefficient_i x expression_i) over 8 genes (coefficients in Suppl. Fig. S3B)",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "log2-transformed array expression (Methods: log2 transformation, genes with expression >0 retained); risk scores in Fig. S3C range about -12 to -5",
+      "cutoff": "optimal cutoff from X-tile in training set (value not reported), applied unchanged to validation set",
+      "reported_performance": "GSE65682 training (n=335): time AUC 0.77 (3 d), 0.77 (14 d), 0.78 (28 d); mortality AUC 0.78; KM log-rank p<0.0001. GSE65682 validation (n=144): time AUC 0.73/0.70/0.73; mortality AUC 0.73. Prospective in-house PBMC RT-qPCR cohort (n=51): 28-day mortality AUC 0.86; time AUC 0.69 (3 d), 0.82 (7 d), 0.80 (14 d), 0.86 (28 d).",
+      "source_location": "Methods 'Construction of prognostic signature'; Results + Fig. 4; coefficients table and HRs in Supplementary Figure S3B (DataSheet1.pdf, page 3)",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 335},
+    {"accession": "GSE65682", "role": "internal_validation", "n_used": 144},
+    {"accession": "GSE95233", "role": "other", "n_used": 73},
+    {"accession": "GSE167363", "role": "scRNA", "n_used": 12}
+  ],
+  "notes": "Coefficients read from the table image in Supplementary Figure S3B (downloaded via Europe PMC supplementary zip to signatures/extraction/suppl/40612938/x/DataSheet1.pdf); they agree with the printed HRs (e.g. exp(0.665)=1.94 vs HR 1.945; exp(-0.947)=0.388 vs HR 0.388). Gene selection: lactylation consensus clusters (k-means on GSVA of 48 lactylation genes) -> DEGs cluster3 vs others intersected with DEGs non-survivor vs survivor -> univariate Cox -> LASSO + Elastic Net -> multivariate Cox, all in GSE65682 sepsis patients (n=479). GSE95233 (51 septic shock + 22 healthy) was used for GSEA, lactylation scoring, pseudotime and longitudinal risk-score dynamics by survival (no formal AUC validation) - listed as 'other' but it is used. External validation in an in-house cohort used RT-qPCR (beta-actin normalised), not a GEO dataset."
+}

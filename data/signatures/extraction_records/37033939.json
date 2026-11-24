@@ -1,0 +1,33 @@
+{
+  "pmid": "37033939", "pmcid": "PMC10076848", "first_author": "Peng Y", "year": "2023", "journal": "Front Immunol",
+  "title": "An immune-related gene signature predicts the 28-day mortality in patients with sepsis.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Peng2023_IRG3",
+      "model_type": "linear_cox",
+      "purpose": "mortality",
+      "outcome_definition": "28-day mortality / 28-day survival",
+      "genes": [
+        {"symbol": "HLA-DMB", "coef": -0.685, "direction": "protective"},
+        {"symbol": "IL4R", "coef": -0.668, "direction": "protective"},
+        {"symbol": "LTB4R", "coef": -0.298, "direction": "protective"}
+      ],
+      "n_genes": 3,
+      "verbatim_formula": "risk score = sum_{i=1..n} beta_i * i (beta = multivariate Cox coefficient; i = gene expression); coefficients HLA-DMB -0.685, IL4R -0.668, LTB4R -0.298",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "GEO series matrix values, probes collapsed to gene symbol by averaging; no further transformation stated",
+      "cutoff": "median risk score of each dataset",
+      "reported_performance": "28-day mortality AUC: GSE65682 training (n=240) 0.704; testing (n=239) 0.601; entire GSE65682 (n=479) 0.648; E-MTAB-4451 (n=106) 0.619; C-index in training 0.696",
+      "source_location": "Methods 'Construction and validation of prognostic IRG signature' + Table 2 + Figures 2-4",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 240},
+    {"accession": "GSE65682", "role": "internal_validation", "n_used": 239},
+    {"accession": "GSE65682", "role": "DEG_screening", "n_used": 521},
+    {"accession": "E-MTAB-4451", "role": "external_validation", "n_used": 106}
+  ],
+  "notes": "Random 1:1 split of GSE65682 (479 sepsis with 28-day follow-up). DEGs and WGCNA used GSE65682 sepsis vs 42 healthy controls. Paper states GSE65682 platform as GPL570 (GEO lists GPL13667) - recorded as stated. Coefficients are multivariate Cox (after LASSO); LTB4R P=0.135 in final model."
+}

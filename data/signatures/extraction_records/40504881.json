@@ -1,0 +1,1267 @@
+{
+ "pmid": "40504881",
+ "pmcid": "PMC12161593",
+ "first_author": "Li Z",
+ "year": "2025",
+ "journal": "PLoS One",
+ "title": "Immune-associated molecular classification and prognosis signature of sepsis.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Li2025_immune21",
+   "model_type": "linear_cox",
+   "purpose": "survival",
+   "outcome_definition": "28-day survival (7/14/21-day time-dependent ROC)",
+   "genes": [
+    {
+     "symbol": "HLA-E",
+     "coef": 48.0262882319491,
+     "direction": "risk"
+    },
+    {
+     "symbol": "CAMP",
+     "coef": -7.25344831874039,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CETP",
+     "coef": -5.82115985733193,
+     "direction": "protective"
+    },
+    {
+     "symbol": "DEFA4",
+     "coef": 3.67535084614692,
+     "direction": "risk"
+    },
+    {
+     "symbol": "SOS1",
+     "coef": -13.4195032559925,
+     "direction": "protective"
+    },
+    {
+     "symbol": "UNC93B1",
+     "coef": -4.31279892936899,
+     "direction": "protective"
+    },
+    {
+     "symbol": "TNFRSF14",
+     "coef": -10.4252426288893,
+     "direction": "protective"
+    },
+    {
+     "symbol": "HSPA1B",
+     "coef": 4.46909862829154,
+     "direction": "risk"
+    },
+    {
+     "symbol": "DEFB119",
+     "coef": 4.23152200819458,
+     "direction": "risk"
+    },
+    {
+     "symbol": "NRG1",
+     "coef": -4.61194228726082,
+     "direction": "protective"
+    },
+    {
+     "symbol": "SDC4",
+     "coef": 3.82484784317362,
+     "direction": "risk"
+    },
+    {
+     "symbol": "CXCL8",
+     "coef": 1.70008934306757,
+     "direction": "risk"
+    },
+    {
+     "symbol": "CXCR3",
+     "coef": -4.49044590974668,
+     "direction": "protective"
+    },
+    {
+     "symbol": "FGFR1",
+     "coef": 5.621074270975,
+     "direction": "risk"
+    },
+    {
+     "symbol": "TNFRSF12A",
+     "coef": 4.84562596942907,
+     "direction": "risk"
+    },
+    {
+     "symbol": "NFYC",
+     "coef": -6.42658624087973,
+     "direction": "protective"
+    },
+    {
+     "symbol": "TNFSF12",
+     "coef": -3.37204453766963,
+     "direction": "protective"
+    },
+    {
+     "symbol": "MAP3K14",
+     "coef": -3.19099095664513,
+     "direction": "protective"
+    },
+    {
+     "symbol": "NOX4",
+     "coef": 3.05457032022328,
+     "direction": "risk"
+    },
+    {
+     "symbol": "FASLG",
+     "coef": -2.8652236089116,
+     "direction": "protective"
+    },
+    {
+     "symbol": "DDX17",
+     "coef": -8.12899295978774,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 21,
+   "verbatim_formula": "risk score = β1 × geneExp1 + ... + β(N) × geneExp(N) (β = multivariate Cox coefficients, S9 Table)",
+   "higher_score_means": "higher risk",
+   "expression_scale_used": "GSE65682 GEO expression values for training (scale not stated); local validation used qPCR relative expression (2^-ΔΔCt)",
+   "cutoff": "median risk score",
+   "reported_performance": "GSE65682 training (n=479): C-index 0.83; tdAUC 0.887/0.865/0.840 at 7/14/21 d; local qPCR validation cohort (n=164): 0.811/0.838/0.835",
+   "source_location": "Methods 'Construction of prediction model' + Results Fig 6 + S9 Table (coefficients; suppl/40504881/direct/S9.xlsx)",
+   "released_code_or_model": "S3 File (original code, PLOS ONE supplement pone.0326083.s003.txt)"
+  },
+  {
+   "model_id": "Li2025_immune_NMF_clusters",
+   "model_type": "subtype_clustering",
+   "purpose": "subtype",
+   "outcome_definition": "NMF consensus clusters (k=2); Cluster A poorer survival than Cluster B",
+   "genes": [
+    {
+     "symbol": "ADAR",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ADCYAP1R1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ADIPOR2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ADRB2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "AHNAK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "APOBEC3A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ARG2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ARRB1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "AZU1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BIRC5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BRAF",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BRD8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BST2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CAMP",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CARD11",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CBL",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCL5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCR3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCR5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCR6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCR7",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD14",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD1D",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD244",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD247",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD28",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD3D",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD3E",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD3G",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD48",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD74",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD81",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD86",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD8A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CECR1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CETP",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CHIT1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CLEC11A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CMTM3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CMTM8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CSF1R",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CSF3R",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CSK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CTSE",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CTSG",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CTSL1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CTSS",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CX3CR1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CXCL5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CYSLTR1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DARC",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DCK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DDX17",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DEFA4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DEFB119",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EDNRB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ELANE",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FASLG",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FCGR3A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FCGRT",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FGFR1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FLT3LG",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FPR1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FURIN",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FYN",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GBP2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GNLY",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GRB2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GRN",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GSK3B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GZMB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HBEGF",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HCK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HDGF",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DMA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DMB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DPA1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DPB1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DRA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DRB1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-F",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HMGB1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HSPA1B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HSPA1L",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HSPA6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IFI30",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IFITM1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IFNAR2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IGF2R",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IKBKB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IKBKG",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL10RA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL12RB1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL17RA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL1B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL1R2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL1RL1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL23A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL27RA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL2RB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL2RG",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL32",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL4R",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL6R",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL7R",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "INHBA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IRF1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IRF9",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ISG20L2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ITGAL",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ITGB2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ITK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "JAK1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "JUN",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KCNH2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KLRC1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KLRD1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KLRK1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LCK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LCP2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LGR6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LTB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LTBR",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LYN",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LYZ",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MAP3K14",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MPO",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MX2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NCR1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NDRG1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NFATC2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NFATC3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NFKB1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NFYB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NFYC",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NOX4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NR1D2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NRG1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "OPRD1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "OPRL1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PAK1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PGC",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PIK3CD",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PIK3CG",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PIK3R5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PLCG2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PLXNB2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PLXNC1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PLXND1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PPARA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRDX2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRKCB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRKCQ",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PROK2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRTN3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PSMB8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PSMD14",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PSME1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PTGDR",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PTGDS",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PTPN11",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PTPN6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PTX3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RABEP2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RARRES3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RASGRP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RBP7",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RNASE3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RNASEL",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RXRB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "S100A11",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SDC4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SECTM1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SEMA3B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SEMA4D",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SEMA7A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SERPINA3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SH2D1A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SOS1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SYTL1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TAP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TAP2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TAPBP",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TAPBPL",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TFR2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TFRC",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TGFBR3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "THBS1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "THRA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TLR7",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TMSB10",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNF",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFAIP3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFRSF10B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFRSF10C",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFRSF12A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFRSF13B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFRSF14",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFRSF1A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFRSF25",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFRSF8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFRSF9",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFSF10",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFSF12",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFSF14",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TPT1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TRBC1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TRBV9",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TRIM27",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TXK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TYK2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TYROBP",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "UNC93B1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "VAV1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "VEGFA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "VIPR2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "WFDC2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZAP70",
+     "coef": null,
+     "direction": "null"
+    }
+   ],
+   "n_genes": 222,
+   "verbatim_formula": null,
+   "higher_score_means": "unclear",
+   "expression_scale_used": "unclear",
+   "cutoff": "NMF consensus clustering k=2 (no transferable assignment rule)",
+   "reported_performance": "KM survival difference Cluster A vs B in GSE65682 (P<0.001); no AUC",
+   "source_location": "Results 'molecular classification' + Fig 2 + S6 Table (222 prognosis-related immune genes)",
+   "released_code_or_model": "S3 File"
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training",
+   "n_used": 479
+  }
+ ],
+ "notes": "Model fit on all 479 GSE65682 patients with follow-up; validated in a local cohort (164 patients, Xinjiang) by qPCR of the 21 genes (not a public GEO dataset). Coefficients taken from S9 Table (downloaded from PLOS ONE); 'IL8' in source mapped to CXCL8. Coefficients are extremely large (e.g. HLA-E 48.0, HR 7e20), suggesting overfitting/unusual expression scaling; 5 of 21 genes have P>0.05 in the final model despite text saying 21 significant. Clustering gene list = 222 univariate-Cox genes from S6 Table; text says genes with MAD<0.5 were excluded before clustering, so the actual clustering input may be a subset. Paper reports 21-day (not 28-day) AUCs."
+}

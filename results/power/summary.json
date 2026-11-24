@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-16",
+  "seed": 20261116,
+  "B": 2000,
+  "n_models": 36,
+  "median_published": 0.568426,
+  "SE_median_published": 0.016228,
+  "SE_single_model": 0.030839,
+  "split_half_rho_median": 0.643498,
+  "split_half_rho_q25": 0.609962,
+  "replication_se": [0.047185, 0.024829]
+}

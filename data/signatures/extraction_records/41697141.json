@@ -1,0 +1,62 @@
+{
+ "pmid": "41697141",
+ "pmcid": null,
+ "first_author": "Sun F",
+ "year": "2026",
+ "journal": "Shock",
+ "title": "Risk Model Based on Neutrophil-Related Genes Constructs to Assess Prognosis and Immune Landscape in Sepsis.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Sun2026_NRG5",
+   "model_type": "linear_cox",
+   "purpose": "mortality",
+   "outcome_definition": "28-day survival",
+   "genes": [
+    {
+     "symbol": "RCBTB2",
+     "coef": -0.1863,
+     "direction": "protective"
+    },
+    {
+     "symbol": "KRT23",
+     "coef": -0.1278,
+     "direction": "protective"
+    },
+    {
+     "symbol": "KLF9",
+     "coef": 0.2624,
+     "direction": "risk"
+    },
+    {
+     "symbol": "GIMAP4",
+     "coef": -0.1863,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CD84",
+     "coef": -0.2877,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 5,
+   "verbatim_formula": "coef = ln(HR) from multivariate forest plot (Fig 3C); HR printed to 2 decimals",
+   "higher_score_means": "higher risk",
+   "cutoff": "median",
+   "source_location": "Fig 3C",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training/internal_validation"
+  },
+  {
+   "accession": "GSE95233",
+   "role": "external_validation"
+  }
+ ],
+ "notes": "Full PDF (accepted manuscript) read 2026-11-10. Coefficients approximate (HR 2 decimals)."
+}

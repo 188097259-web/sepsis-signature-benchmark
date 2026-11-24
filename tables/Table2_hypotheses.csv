@@ -1,0 +1,7 @@
+item,criterion,estimate,p_one_sided,p_holm,decision
+H1,upper 95% CI of Delta < 0.05,-0.025 (-0.045 to -0.002),"","",Supported
+H2,E1 lower 95% CI > 0.50,0.593 (0.556 to 0.628),0.0005,0.0015,Supported
+H3,median adjusted R2 basic-bootstrap lower 95% CI > 0.5,0.188 (0.117 to 0.207),1.0000,1.0000,Not supported
+H4,SRS label change C0 vs C1 lower 95% CI > 5%,0.072 (0.020 to 0.228),0.2363,0.4726,Not supported
+"L1 (CMAISE, added after main results)",upper 95% CI of Delta < 0.05,-0.016 (-0.051 to 0.014),"","",Met
+"L2 (CMAISE, added after main results)",lower 95% CI of E1 > 0.50,0.589 (0.544 to 0.639),"","",Met

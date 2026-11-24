@@ -1,0 +1,2487 @@
+{
+ "pmid": "38263335",
+ "pmcid": "PMC10805801",
+ "first_author": "Ma G",
+ "year": "2024",
+ "journal": "Sci Rep",
+ "title": "Development of macrophage-associated genes prognostic signature predicts clinical outcome and immune infiltration for sepsis.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Ma2024_MAAG4",
+   "model_type": "linear_cox",
+   "purpose": "mortality",
+   "outcome_definition": "28-day survival",
+   "genes": [
+    {
+     "symbol": "CD160",
+     "coef": -1.73,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CX3CR1",
+     "coef": -1.51,
+     "direction": "protective"
+    },
+    {
+     "symbol": "DENND2D",
+     "coef": -2.01,
+     "direction": "protective"
+    },
+    {
+     "symbol": "FAM43A",
+     "coef": -1.49,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 4,
+   "verbatim_formula": "MAAGs risk score = CD160 x (-1.73) + CX3CR1 x (-1.51) + DENND2D x (-2.01) + FAM43A x (-1.49)",
+   "higher_score_means": "higher risk",
+   "expression_scale_used": "GSE54514/GSE65682/GSE95233 merged and batch-corrected with sva (scale unclear)",
+   "cutoff": "optimal survival cutoff",
+   "reported_performance": "GSE65682 all (n=479) time-AUC 0.720/0.692/0.689 at 7/14/28 d; training 0.761/0.716/0.708; test 0.653/0.652/0.659; multivariate HR 1.572",
+   "source_location": "Methods 'Development of MAAGs risk score'; Results Fig. 4-5",
+   "released_code_or_model": null
+  },
+  {
+   "model_id": "Ma2024_MAAGcluster",
+   "model_type": "subtype_clustering",
+   "purpose": "subtype",
+   "outcome_definition": "ConsensusClusterPlus clusters A/B on 480 DE-MAAGs; cluster B worse 28-day survival",
+   "genes": [
+    {
+     "symbol": "ABCF1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ABLIM1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ADA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "AES",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "AFF3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "AKR1B1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ANAPC1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "APEX1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "APOL3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "APRT",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ARHGEF18",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ARHGEF3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ARL2BP",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ARL4C",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ASTE1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ATF7IP2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ATIC",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ATP5A1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ATP5G2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ATP8B2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "AUTS2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BACH2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BCKDHB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BCL11B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BET1L",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BIN1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BIRC3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BLCAP",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BLNK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BTBD11",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "BUB3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "C11orf2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "C11orf46",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "C12orf57",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "C12orf65",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "C16orf80",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "C19orf2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "C21orf59",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "C2orf89",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "C4orf14",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "C6orf48",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CBLB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCDC109B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCDC115",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCDC76",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCND2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCR5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCR6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCR7",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCT3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCT4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCT6A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCT8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD160",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD247",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD27",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD3D",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD3E",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD3G",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD74",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD81",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD8A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD8B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CD96",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CDC23",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CEP78",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CHCHD10",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CHMP7",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CIB1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CIRH1A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CLIC3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CLSTN1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CRIP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CRTAM",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CTCF",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CUL1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CUTA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CX3CR1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CXCR5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CXXC5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CYB5B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DDHD2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DDX18",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DDX21",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DDX24",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DDX27",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DDX47",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DENND2D",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DHRS3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DKC1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DNMT1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DOCK10",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DPP4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "DYRK2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EEF1G",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EEF2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EIF3A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EIF3D",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EIF3E",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EIF3F",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EIF3H",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EIF3L",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ELP2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EOMES",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EPHX2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EPRS",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ERP29",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ESYT1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ESYT2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ETS1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EVL",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EXOSC10",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EXOSC8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FAIM3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FAM102A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FAM113B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FAM117B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FAM162A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FAM43A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FAM53B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FAM78A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FAM98B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FBL",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FBXL16",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FBXO21",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FCER1A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FCRL3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FGFBP2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FHIT",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FLT3LG",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FN3KRP",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FNBP4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FTO",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FTSJ1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FUS",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FXYD5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FYN",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GAL3ST4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GAR1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GATA3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GCET2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GCN1L1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GIMAP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GIMAP5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GIMAP6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GIMAP7",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GLOD4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GLTSCR2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GNLY",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GOLGA8A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GPR171",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GPR18",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GPR183",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GPR56",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GPRASP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GRINA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GTPBP3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GZMA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GZMB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GZMH",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GZMK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "GZMM",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HEATR2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HIGD2A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DMA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DMB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DOA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DPA1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DPB1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DQA1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DRA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HLA-DRB1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HMGN3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HNRNPA0",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HNRNPA1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HNRNPH1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HNRNPR",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HNRPDL",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HSPA8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HSPA9",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HSPD1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HTATSF1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "HVCN1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IARS",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ICAM2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ID3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IKZF2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IKZF3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL10RA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL11RA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL23A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL27RA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL2RB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL32",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IL7R",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IMMT",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IMP3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IMPDH2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IPO5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "IRF8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ISOC1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ITGA4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ITK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ITM2A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KARS",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KCNA3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KCTD6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KHDRBS1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KIAA0182",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KIAA0748",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KIAA1310",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KIAA1704",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KLRB1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KLRD1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KLRF1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KLRG1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "KLRK1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LANCL1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LARS",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LAX1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LCK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LDHB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LDOC1L",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LEF1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LPIN1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LPXN",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LRIG1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LRPPRC",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LRRC33",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LRRC47",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LRRN3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LUC7L2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LY9",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "LYAR",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "M6PR",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MAD1L1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MAF",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MAGED1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MAP3K4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MATK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MCCC2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MEAF6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MEF2C",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "METAP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MGA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MLL",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MOAP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MORC2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MPHOSPH10",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MRI1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MRPS18B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MTMR15",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MTR",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MTX3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MYBL1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MYC",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "MYCBP2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NAE1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NCL",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NCRNA00219",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NDNL2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NELL2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NFATC2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NFATC3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NFE2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NHP2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NHP2L1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NIPAL3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NKTR",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NLRC3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NMT2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NOB1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NOL11",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NOLC1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NONO",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NOP56",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NOSIP",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NPAT",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NPM1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NR1D2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NSA2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NSUN5P2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NUCKS1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NUDT9",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NUP107",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NUP205",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NUP93",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "NXT1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "OCIAD2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "OGFOD1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "OSGEPL1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "OXNAD1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "P2RY10",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "P2RY8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PABPC4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PAFAH2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PAN2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PAPD7",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PAQR8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PARP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PASK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PCYOX1L",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PDCD4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PEBP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PECI",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PIK3IP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PJA1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PLEKHA1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PLSCR3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "POLD2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "POLR1B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PPIH",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PPP1R16B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PPP3CC",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PQLC3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRF1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRKACB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRKCH",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRKCQ",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRPF19",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRPF8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRPS1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRR5L",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PRSS23",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PSMG2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PTBP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PTCH1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PTPLAD1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PTPN4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PTPRCAP",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PUF60",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PURA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "PYHIN1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RABL2A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RABL2B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RANGRF",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RASGRP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RBBP4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RBBP7",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RCC2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "REPS1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RFTN1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RNASEH2B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RNASEN",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RNF125",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RORA",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL10",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL10A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL13",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL13A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL14",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL15",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL18",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL19",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL22",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL23A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL29",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPL7A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPLP2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPS19",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPS23",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPS28",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPS4X",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPS5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RPS8",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RRAS2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RRP1B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RRS1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RUNX3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "S1PR5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SAMD3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SART3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SBK1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SCRN1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SEC31A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SET",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SF3A3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SFRS15",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SFRS5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SFRS7",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SGK223",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SH2B3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SH2D1B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SH2D2A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SH3YL1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SIDT1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SIRPG",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SIT1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SKAP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SLAMF6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SLBP",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SLC25A5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SLC25A6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SLC38A1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SLC4A7",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SLC7A6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SMAD3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SMARCE1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SMS",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SMYD2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SNHG12",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SNRNP200",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SPN",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SPOCK2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SPON2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SSBP2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ST3GAL5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ST6GAL1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "STAG3L2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "STAG3L3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "STAT4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "STK39",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "STMN3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SUN1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SUPT16H",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "SYTL2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TAF15",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TAF4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TBC1D4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TBC1D9",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TBX21",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TCF7",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TCTN1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TECR",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TGFBR3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TH1L",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "THEM4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "THEMIS",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "THOC1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "THUMPD1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TIAM1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TIGIT",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TNFRSF25",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TOMM70A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TOP2B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TRAF5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TRAT1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TRBC1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TRBV9",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TRIB2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TRIM44",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TRIT1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TSEN54",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TSHZ1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TTC19",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TTC27",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TTC3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TTC39C",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TULP4",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TXK",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "UBAP1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "UBAP2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "UBASH3A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "UNC119B",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "USP11",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "USP32",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "UTP3",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "VEGFB",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "WDR54",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "XRCC6",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "YWHAQ",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZBTB38",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZFP64",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZMYND11",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZNF146",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZNF266",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZNF275",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZNF395",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZNF512",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZNF529",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZNF573",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZNF664",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZNF91",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ZNHIT6",
+     "coef": null,
+     "direction": "null"
+    }
+   ],
+   "n_genes": 480,
+   "verbatim_formula": "",
+   "higher_score_means": "unclear",
+   "expression_scale_used": "sva-corrected merged expression",
+   "cutoff": "consensus clustering k chosen from 2-9 (2 clusters)",
+   "reported_performance": "28-day survival differed between clusters (figure only)",
+   "source_location": "Methods; Results Fig. 2; Supplementary Table 1 (480 genes)",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training",
+   "n_used": 479
+  },
+  {
+   "accession": "GSE65682",
+   "role": "internal_validation",
+   "n_used": null
+  },
+  {
+   "accession": "GSE54514",
+   "role": "other",
+   "n_used": null
+  },
+  {
+   "accession": "GSE95233",
+   "role": "other",
+   "n_used": null
+  }
+ ],
+ "notes": "All four Cox coefficients are negative, so higher (less negative) score = lower expression of protective genes = higher risk; paper states high score worse survival and HR>1. Train/test = 6:4 caret split of GSE65682. GSE54514 and GSE95233 were batch-merged with GSE65682 and used as test cohorts for diagnostic AUCs of the four genes (role 'other' but any use disqualifies). Coefficients appear large, consistent with batch-corrected scale. Clustering genes from Supplementary Table 1 (no centroids released, not reproducible as a classifier)."
+}

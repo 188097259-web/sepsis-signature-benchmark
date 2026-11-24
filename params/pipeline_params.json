@@ -1,0 +1,309 @@
+{
+ "_note": "Pre-specified parameters for the random-pipeline null (protocol 4.3). Derived from 36 pipeline extraction records (docs/pipeline_extraction.csv), 2026-11-16, before any random model was built.",
+ "use_deg": true,
+ "deg_abs_log2fc": 1.0,
+ "deg_p_type": "adj",
+ "deg_p": 0.05,
+ "unicox_p": 0.05,
+ "lambda": "lambda.min",
+ "main_weights": "multicox",
+ "theme_scaling": "theme_size = max(round(S * |U| / 20000), min(S, 10)); S = reported theme size, or the median of reported sizes when not reported",
+ "median_reported_theme_size": 332,
+ "gene_universe_size": 9471,
+ "n_runs_per_model": 200,
+ "n_runs_nodeg_per_model": 50,
+ "n_runs_fixed_size": 1000,
+ "n_runs_full_universe": 200,
+ "max_tries_factor": 50,
+ "fixed_sizes": [],
+ "h1_margin": 0.05,
+ "bootstrap_B": 2000,
+ "trained_on_GSE65682": [
+  "Jiang2022_IRRG9",
+  "Zheng2022_IRG22",
+  "Liang2022_pyroptosis6",
+  "Chen2023_IRG7",
+  "Lin2023_7IRG",
+  "Peng2023_IRG3",
+  "Shu2024_MiAG5",
+  "Liu2023_ERS10",
+  "Ma2024_MAAG4",
+  "Wang2024_anoikis4",
+  "Jiang2024_PRG10",
+  "Chen2024_OSDEG16",
+  "Zhang2024_cuproptosis3",
+  "Wu2024_NETosis5",
+  "Shen2024_platelet10",
+  "Wang2025_FRG3",
+  "Li2025_immune21",
+  "Li2025_Lactylation8",
+  "Zhu2025_MOSRG3",
+  "Li2025_LRG5",
+  "Zeng2025_3gene",
+  "Zhou2025_PCD7",
+  "Xiong2025_Ferritinophagy3",
+  "Xie2025_ETG10_Cox",
+  "Sun2026_NRG5",
+  "LiX2026_Th17_8gene",
+  "Xue2026_URS3",
+  "Li2026_GMGscore6",
+  "Gan2026_CDI2",
+  "Wang2026_PRGscore7",
+  "Liu2026_m6A4",
+  "Luo2026_RCDscore6"
+ ],
+ "models": [
+  {
+   "model_id": "Zhou2022_7geneLogistic",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 479
+  },
+  {
+   "model_id": "Jiang2022_IRRG9",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 240
+  },
+  {
+   "model_id": "Zheng2022_IRG22",
+   "theme_size_reported": 2483,
+   "theme_size_genome": 2483,
+   "theme_size": 1176,
+   "n_train": 479
+  },
+  {
+   "model_id": "Liang2022_pyroptosis6",
+   "theme_size_reported": 60,
+   "theme_size_genome": 60,
+   "theme_size": 28,
+   "n_train": 263
+  },
+  {
+   "model_id": "Chen2023_IRG7",
+   "theme_size_reported": 2498,
+   "theme_size_genome": 2498,
+   "theme_size": 1183,
+   "n_train": 239
+  },
+  {
+   "model_id": "Lin2023_7IRG",
+   "theme_size_reported": 2498,
+   "theme_size_genome": 2498,
+   "theme_size": 1183,
+   "n_train": 240
+  },
+  {
+   "model_id": "Peng2023_IRG3",
+   "theme_size_reported": 1793,
+   "theme_size_genome": 1793,
+   "theme_size": 849,
+   "n_train": 240
+  },
+  {
+   "model_id": "Shu2024_MiAG5",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 479
+  },
+  {
+   "model_id": "Liu2023_ERS10",
+   "theme_size_reported": 1116,
+   "theme_size_genome": 1116,
+   "theme_size": 528,
+   "n_train": 288
+  },
+  {
+   "model_id": "Ma2024_MAAG4",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 479
+  },
+  {
+   "model_id": "Wang2024_anoikis4",
+   "theme_size_reported": 254,
+   "theme_size_genome": 254,
+   "theme_size": 120,
+   "n_train": 240
+  },
+  {
+   "model_id": "Feng2024_ROS37",
+   "theme_size_reported": 137,
+   "theme_size_genome": 137,
+   "theme_size": 65,
+   "n_train": 479
+  },
+  {
+   "model_id": "Jiang2024_PRG10",
+   "theme_size_reported": 300,
+   "theme_size_genome": 300,
+   "theme_size": 142,
+   "n_train": 328
+  },
+  {
+   "model_id": "Chen2024_OSDEG16",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 479
+  },
+  {
+   "model_id": "Zhang2024_cuproptosis3",
+   "theme_size_reported": 10,
+   "theme_size_genome": 10,
+   "theme_size": 10,
+   "n_train": 479
+  },
+  {
+   "model_id": "Wu2024_NETosis5",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 479
+  },
+  {
+   "model_id": "Shen2024_platelet10",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 287
+  },
+  {
+   "model_id": "Long2024_4gene",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 479
+  },
+  {
+   "model_id": "Wang2025_FRG3",
+   "theme_size_reported": 388,
+   "theme_size_genome": 388,
+   "theme_size": 184,
+   "n_train": 479
+  },
+  {
+   "model_id": "Luo2025_MRMG4",
+   "theme_size_reported": 90,
+   "theme_size_genome": 90,
+   "theme_size": 43,
+   "n_train": 479
+  },
+  {
+   "model_id": "Li2025_immune21",
+   "theme_size_reported": 2498,
+   "theme_size_genome": 2498,
+   "theme_size": 1183,
+   "n_train": 479
+  },
+  {
+   "model_id": "Li2025_Lactylation8",
+   "theme_size_reported": 332,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 335
+  },
+  {
+   "model_id": "Zhu2025_MOSRG3",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 479
+  },
+  {
+   "model_id": "Li2025_LRG5",
+   "theme_size_reported": 327,
+   "theme_size_genome": 327,
+   "theme_size": 155,
+   "n_train": 159
+  },
+  {
+   "model_id": "Zeng2025_3gene",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 240
+  },
+  {
+   "model_id": "Zhou2025_PCD7",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 479
+  },
+  {
+   "model_id": "Xiong2025_Ferritinophagy3",
+   "theme_size_reported": 20,
+   "theme_size_genome": 20,
+   "theme_size": 10,
+   "n_train": 335
+  },
+  {
+   "model_id": "Xie2025_ETG10_Cox",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 479
+  },
+  {
+   "model_id": "Sun2026_NRG5",
+   "theme_size_reported": 1394,
+   "theme_size_genome": 1394,
+   "theme_size": 660,
+   "n_train": 335
+  },
+  {
+   "model_id": "LiX2026_Th17_8gene",
+   "theme_size_reported": null,
+   "theme_size_genome": 332,
+   "theme_size": 157,
+   "n_train": 234
+  },
+  {
+   "model_id": "Xue2026_URS3",
+   "theme_size_reported": 997,
+   "theme_size_genome": 997,
+   "theme_size": 472,
+   "n_train": 479
+  },
+  {
+   "model_id": "Li2026_GMGscore6",
+   "theme_size_reported": 248,
+   "theme_size_genome": 248,
+   "theme_size": 117,
+   "n_train": 479
+  },
+  {
+   "model_id": "Gan2026_CDI2",
+   "theme_size_reported": 3421,
+   "theme_size_genome": 3421,
+   "theme_size": 1620,
+   "n_train": 479
+  },
+  {
+   "model_id": "Wang2026_PRGscore7",
+   "theme_size_reported": 61,
+   "theme_size_genome": 61,
+   "theme_size": 29,
+   "n_train": 479
+  },
+  {
+   "model_id": "Liu2026_m6A4",
+   "theme_size_reported": 20,
+   "theme_size_genome": 20,
+   "theme_size": 10,
+   "n_train": 335
+  },
+  {
+   "model_id": "Luo2026_RCDscore6",
+   "theme_size_reported": 7460,
+   "theme_size_genome": 7460,
+   "theme_size": 3533,
+   "n_train": 479
+  }
+ ]
+}

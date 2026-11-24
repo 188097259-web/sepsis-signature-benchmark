@@ -1,0 +1,164 @@
+geo_accession,title,source_name_ch1,age (years),disease status,gender,group_day,group_id,neutrophil proportion,severity (apacheii),site of infection,tissue
+GSM1317896,"PAXgene whole blood, Control, Day_1, ID=1","PAXgene whole blood, Control, Day 1, ID=1",42,healthy,F,HC_D1,HC_1,0.461538462,NA,NA,whole blood
+GSM1317897,"PAXgene whole blood, Control, Day_1, ID=2","PAXgene whole blood, Control, Day 1, ID=2",40,healthy,F,HC_D1,HC_2,0.53030303,NA,NA,whole blood
+GSM1317898,"PAXgene whole blood, Control, Day_1, ID=3","PAXgene whole blood, Control, Day 1, ID=3",66,healthy,M,HC_D1,HC_3,0.630136986,NA,NA,whole blood
+GSM1317899,"PAXgene whole blood, Control, Day_1, ID=4","PAXgene whole blood, Control, Day 1, ID=4",24,healthy,M,HC_D1,HC_4,0.615384615,NA,NA,whole blood
+GSM1317900,"PAXgene whole blood, Control, Day_1, ID=5","PAXgene whole blood, Control, Day 1, ID=5",70,healthy,F,HC_D1,HC_5,0.583333333,NA,NA,whole blood
+GSM1317901,"PAXgene whole blood, Control, Day_1, ID=6","PAXgene whole blood, Control, Day 1, ID=6",45,healthy,F,HC_D1,HC_6,0.590163934,NA,NA,whole blood
+GSM1317902,"PAXgene whole blood, Control, Day_1, ID=7","PAXgene whole blood, Control, Day 1, ID=7",60,healthy,F,HC_D1,HC_7,0.634920635,NA,NA,whole blood
+GSM1317903,"PAXgene whole blood, Control, Day_1, ID=8","PAXgene whole blood, Control, Day 1, ID=8",36,healthy,F,HC_D1,HC_8,0.547945205,NA,NA,whole blood
+GSM1317904,"PAXgene whole blood, Control, Day_1, ID=9","PAXgene whole blood, Control, Day 1, ID=9",47,healthy,M,HC_D1,HC_9,0.534482759,NA,NA,whole blood
+GSM1317905,"PAXgene whole blood, Control, Day_1, ID=10","PAXgene whole blood, Control, Day 1, ID=10",45,healthy,F,HC_D1,HC_10,0.650793651,NA,NA,whole blood
+GSM1317906,"PAXgene whole blood, Control, Day_1, ID=11","PAXgene whole blood, Control, Day 1, ID=11",58,healthy,F,HC_D1,HC_11,0.674418605,NA,NA,whole blood
+GSM1317907,"PAXgene whole blood, Control, Day_1, ID=12","PAXgene whole blood, Control, Day 1, ID=12",62,healthy,F,HC_D1,HC_12,0.613333333,NA,NA,whole blood
+GSM1317908,"PAXgene whole blood, Control, Day_1, ID=13","PAXgene whole blood, Control, Day 1, ID=13",24,healthy,M,HC_D1,HC_13,0.53968254,NA,NA,whole blood
+GSM1317909,"PAXgene whole blood, Control, Day_1, ID=14","PAXgene whole blood, Control, Day 1, ID=14",24,healthy,M,HC_D1,HC_14,0.638888889,NA,NA,whole blood
+GSM1317910,"PAXgene whole blood, Control, Day_1, ID=15","PAXgene whole blood, Control, Day 1, ID=15",25,healthy,F,HC_D1,HC_15,0.506666667,NA,NA,whole blood
+GSM1317911,"PAXgene whole blood, Control, Day_1, ID=16","PAXgene whole blood, Control, Day 1, ID=16",24,healthy,F,HC_D1,HC_16,0.623188406,NA,NA,whole blood
+GSM1317912,"PAXgene whole blood, Control, Day_1, ID=17","PAXgene whole blood, Control, Day 1, ID=17",27,healthy,F,HC_D1,HC_17,0.5,NA,NA,whole blood
+GSM1317913,"PAXgene whole blood, Control, Day_1, ID=18","PAXgene whole blood, Control, Day 1, ID=18",54,healthy,M,HC_D1,HC_18,0.535714286,NA,NA,whole blood
+GSM1317914,"PAXgene whole blood, sepsis_nonsurvivor, Day_1, ID=19","PAXgene whole blood, sepsis_nonsurvivor, Day 1, ID=19",66,sepsis nonsurvivor,F,NS_D1,NS_19,0.459349593,26,lung,whole blood
+GSM1317915,"PAXgene whole blood, sepsis_nonsurvivor, Day_1, ID=21","PAXgene whole blood, sepsis_nonsurvivor, Day 1, ID=21",77,sepsis nonsurvivor,F,NS_D1,NS_21,0.782945736,26,UT,whole blood
+GSM1317916,"PAXgene whole blood, sepsis_nonsurvivor, Day_1, ID=22","PAXgene whole blood, sepsis_nonsurvivor, Day 1, ID=22",80,sepsis nonsurvivor,M,NS_D1,NS_22,0.689839572,20,blood,whole blood
+GSM1317917,"PAXgene whole blood, sepsis_nonsurvivor, Day_1, ID=23","PAXgene whole blood, sepsis_nonsurvivor, Day 1, ID=23",54,sepsis nonsurvivor,F,NS_D1,NS_23,0.674418605,24,lung,whole blood
+GSM1317918,"PAXgene whole blood, sepsis_nonsurvivor, Day_1, ID=24","PAXgene whole blood, sepsis_nonsurvivor, Day 1, ID=24",53,sepsis nonsurvivor,M,NS_D1,NS_24,0.839181287,28,blood,whole blood
+GSM1317919,"PAXgene whole blood, sepsis_nonsurvivor, Day_1, ID=25","PAXgene whole blood, sepsis_nonsurvivor, Day 1, ID=25",64,sepsis nonsurvivor,M,NS_D1,NS_25,0.879120879,23,lung,whole blood
+GSM1317920,"PAXgene whole blood, sepsis_nonsurvivor, Day_1, ID=26","PAXgene whole blood, sepsis_nonsurvivor, Day 1, ID=26",72,sepsis nonsurvivor,M,NS_D1,NS_26,0.907801418,35,blood,whole blood
+GSM1317921,"PAXgene whole blood, sepsis_nonsurvivor, Day_1, ID=27","PAXgene whole blood, sepsis_nonsurvivor, Day 1, ID=27",81,sepsis nonsurvivor,F,NS_D1,NS_27,0.470588235,19,lung,whole blood
+GSM1317922,"PAXgene whole blood, sepsis_nonsurvivor, Day_1, ID=28","PAXgene whole blood, sepsis_nonsurvivor, Day 1, ID=28",80,sepsis nonsurvivor,F,NS_D1,NS_28,0.853658537,17,lung,whole blood
+GSM1317923,"PAXgene whole blood, sepsis_nonsurvivor, Day_2, ID=19","PAXgene whole blood, sepsis_nonsurvivor, Day 2, ID=19",66,sepsis nonsurvivor,F,NS_D2,NS_19,0.799342105,26,lung,whole blood
+GSM1317924,"PAXgene whole blood, sepsis_nonsurvivor, Day_2, ID=21","PAXgene whole blood, sepsis_nonsurvivor, Day 2, ID=21",77,sepsis nonsurvivor,F,NS_D2,NS_21,0.761506276,26,UT,whole blood
+GSM1317925,"PAXgene whole blood, sepsis_nonsurvivor, Day_2, ID=22","PAXgene whole blood, sepsis_nonsurvivor, Day 2, ID=22",80,sepsis nonsurvivor,M,NS_D2,NS_22,0.889447236,20,blood,whole blood
+GSM1317926,"PAXgene whole blood, sepsis_nonsurvivor, Day_2, ID=23","PAXgene whole blood, sepsis_nonsurvivor, Day 2, ID=23",54,sepsis nonsurvivor,F,NS_D2,NS_23,0.866666667,24,lung,whole blood
+GSM1317927,"PAXgene whole blood, sepsis_nonsurvivor, Day_2, ID=24","PAXgene whole blood, sepsis_nonsurvivor, Day 2, ID=24",53,sepsis nonsurvivor,M,NS_D2,NS_24,0.850948509,28,blood,whole blood
+GSM1317928,"PAXgene whole blood, sepsis_nonsurvivor, Day_2, ID=26","PAXgene whole blood, sepsis_nonsurvivor, Day 2, ID=26",72,sepsis nonsurvivor,M,NS_D2,NS_26,0.801282051,35,blood,whole blood
+GSM1317929,"PAXgene whole blood, sepsis_nonsurvivor, Day_2, ID=27","PAXgene whole blood, sepsis_nonsurvivor, Day 2, ID=27",81,sepsis nonsurvivor,F,NS_D2,NS_27,0.731481481,19,lung,whole blood
+GSM1317930,"PAXgene whole blood, sepsis_nonsurvivor, Day_3, ID=19","PAXgene whole blood, sepsis_nonsurvivor, Day 3, ID=19",66,sepsis nonsurvivor,F,NS_D3,NS_19,0.91,26,lung,whole blood
+GSM1317931,"PAXgene whole blood, sepsis_nonsurvivor, Day_3, ID=21","PAXgene whole blood, sepsis_nonsurvivor, Day 3, ID=21",77,sepsis nonsurvivor,F,NS_D3,NS_21,0.810457516,26,UT,whole blood
+GSM1317932,"PAXgene whole blood, sepsis_nonsurvivor, Day_3, ID=22","PAXgene whole blood, sepsis_nonsurvivor, Day 3, ID=22",80,sepsis nonsurvivor,M,NS_D3,NS_22,0.902061856,20,blood,whole blood
+GSM1317933,"PAXgene whole blood, sepsis_nonsurvivor, Day_3, ID=23","PAXgene whole blood, sepsis_nonsurvivor, Day 3, ID=23",54,sepsis nonsurvivor,F,NS_D3,NS_23,0.891089109,24,lung,whole blood
+GSM1317934,"PAXgene whole blood, sepsis_nonsurvivor, Day_3, ID=24","PAXgene whole blood, sepsis_nonsurvivor, Day 3, ID=24",53,sepsis nonsurvivor,M,NS_D3,NS_24,0.740625,28,blood,whole blood
+GSM1317935,"PAXgene whole blood, sepsis_nonsurvivor, Day_3, ID=26","PAXgene whole blood, sepsis_nonsurvivor, Day 3, ID=26",72,sepsis nonsurvivor,M,NS_D3,NS_26,0.897526502,35,blood,whole blood
+GSM1317936,"PAXgene whole blood, sepsis_nonsurvivor, Day_3, ID=27","PAXgene whole blood, sepsis_nonsurvivor, Day 3, ID=27",81,sepsis nonsurvivor,F,NS_D3,NS_27,0.866666667,19,lung,whole blood
+GSM1317937,"PAXgene whole blood, sepsis_nonsurvivor, Day_4, ID=19","PAXgene whole blood, sepsis_nonsurvivor, Day 4, ID=19",66,sepsis nonsurvivor,F,NS_D4,NS_19,0.938967136,26,lung,whole blood
+GSM1317938,"PAXgene whole blood, sepsis_nonsurvivor, Day_4, ID=20","PAXgene whole blood, sepsis_nonsurvivor, Day 4, ID=20",50,sepsis nonsurvivor,M,NS_D4,NS_20,0.775362319,20,Other,whole blood
+GSM1317939,"PAXgene whole blood, sepsis_nonsurvivor, Day_4, ID=21","PAXgene whole blood, sepsis_nonsurvivor, Day 4, ID=21",77,sepsis nonsurvivor,F,NS_D4,NS_21,0.82566586,26,UT,whole blood
+GSM1317940,"PAXgene whole blood, sepsis_nonsurvivor, Day_4, ID=23","PAXgene whole blood, sepsis_nonsurvivor, Day 4, ID=23",54,sepsis nonsurvivor,F,NS_D4,NS_23,0.7875,24,lung,whole blood
+GSM1317941,"PAXgene whole blood, sepsis_nonsurvivor, Day_4, ID=24","PAXgene whole blood, sepsis_nonsurvivor, Day 4, ID=24",53,sepsis nonsurvivor,M,NS_D4,NS_24,0.773519164,28,blood,whole blood
+GSM1317942,"PAXgene whole blood, sepsis_nonsurvivor, Day_5, ID=19","PAXgene whole blood, sepsis_nonsurvivor, Day 5, ID=19",66,sepsis nonsurvivor,F,NS_D5,NS_19,0.737704918,26,lung,whole blood
+GSM1317943,"PAXgene whole blood, sepsis_nonsurvivor, Day_5, ID=23","PAXgene whole blood, sepsis_nonsurvivor, Day 5, ID=23",54,sepsis nonsurvivor,F,NS_D5,NS_23,0.828282828,24,lung,whole blood
+GSM1317944,"PAXgene whole blood, sepsis_nonsurvivor, Day_5, ID=24","PAXgene whole blood, sepsis_nonsurvivor, Day 5, ID=24",53,sepsis nonsurvivor,M,NS_D5,NS_24,0.829351536,28,blood,whole blood
+GSM1317945,"PAXgene whole blood, sepsis_survivor, Day_1, ID=29","PAXgene whole blood, sepsis_survivor, Day 1, ID=29",45,sepsis survivor,F,S_D1,S_29,0.831932773,10,Other,whole blood
+GSM1317946,"PAXgene whole blood, sepsis_survivor, Day_1, ID=30","PAXgene whole blood, sepsis_survivor, Day 1, ID=30",81,sepsis survivor,F,S_D1,S_30,0.701298701,24,blood,whole blood
+GSM1317947,"PAXgene whole blood, sepsis_survivor, Day_1, ID=31","PAXgene whole blood, sepsis_survivor, Day 1, ID=31",75,sepsis survivor,F,S_D1,S_31,0.923076923,24,lung,whole blood
+GSM1317948,"PAXgene whole blood, sepsis_survivor, Day_1, ID=32","PAXgene whole blood, sepsis_survivor, Day 1, ID=32",50,sepsis survivor,M,S_D1,S_32,0.85915493,20,Other,whole blood
+GSM1317949,"PAXgene whole blood, sepsis_survivor, Day_1, ID=33","PAXgene whole blood, sepsis_survivor, Day 1, ID=33",59,sepsis survivor,M,S_D1,S_33,0.870646766,33,lung,whole blood
+GSM1317950,"PAXgene whole blood, sepsis_survivor, Day_1, ID=34","PAXgene whole blood, sepsis_survivor, Day 1, ID=34",83,sepsis survivor,F,S_D1,S_34,0.940711462,21,UT,whole blood
+GSM1317951,"PAXgene whole blood, sepsis_survivor, Day_1, ID=35","PAXgene whole blood, sepsis_survivor, Day 1, ID=35",52,sepsis survivor,M,S_D1,S_35,0.868613139,16,lung,whole blood
+GSM1317952,"PAXgene whole blood, sepsis_survivor, Day_1, ID=36","PAXgene whole blood, sepsis_survivor, Day 1, ID=36",58,sepsis survivor,M,S_D1,S_36,0.839416058,23,Other,whole blood
+GSM1317953,"PAXgene whole blood, sepsis_survivor, Day_1, ID=37","PAXgene whole blood, sepsis_survivor, Day 1, ID=37",75,sepsis survivor,M,S_D1,S_37,0.698795181,19,UT,whole blood
+GSM1317954,"PAXgene whole blood, sepsis_survivor, Day_1, ID=38","PAXgene whole blood, sepsis_survivor, Day 1, ID=38",73,sepsis survivor,M,S_D1,S_38,0.948387097,10,UT,whole blood
+GSM1317955,"PAXgene whole blood, sepsis_survivor, Day_1, ID=39","PAXgene whole blood, sepsis_survivor, Day 1, ID=39",70,sepsis survivor,F,S_D1,S_39,0.841463415,16,lung,whole blood
+GSM1317956,"PAXgene whole blood, sepsis_survivor, Day_1, ID=40","PAXgene whole blood, sepsis_survivor, Day 1, ID=40",86,sepsis survivor,F,S_D1,S_40,0.902439024,18,UT,whole blood
+GSM1317957,"PAXgene whole blood, sepsis_survivor, Day_1, ID=41","PAXgene whole blood, sepsis_survivor, Day 1, ID=41",60,sepsis survivor,F,S_D1,S_41,0.885135135,17,lung,whole blood
+GSM1317958,"PAXgene whole blood, sepsis_survivor, Day_1, ID=42","PAXgene whole blood, sepsis_survivor, Day 1, ID=42",43,sepsis survivor,M,S_D1,S_42,0.757009346,9,lung,whole blood
+GSM1317959,"PAXgene whole blood, sepsis_survivor, Day_1, ID=43","PAXgene whole blood, sepsis_survivor, Day 1, ID=43",30,sepsis survivor,F,S_D1,S_43,0.737931034,15,lung,whole blood
+GSM1317960,"PAXgene whole blood, sepsis_survivor, Day_1, ID=44","PAXgene whole blood, sepsis_survivor, Day 1, ID=44",18,sepsis survivor,F,S_D1,S_44,0.873417722,11,blood,whole blood
+GSM1317961,"PAXgene whole blood, sepsis_survivor, Day_1, ID=45","PAXgene whole blood, sepsis_survivor, Day 1, ID=45",68,sepsis survivor,F,S_D1,S_45,0.83,32,blood,whole blood
+GSM1317962,"PAXgene whole blood, sepsis_survivor, Day_1, ID=46","PAXgene whole blood, sepsis_survivor, Day 1, ID=46",52,sepsis survivor,F,S_D1,S_46,0.590594744,25,lung,whole blood
+GSM1317963,"PAXgene whole blood, sepsis_survivor, Day_1, ID=47","PAXgene whole blood, sepsis_survivor, Day 1, ID=47",32,sepsis survivor,M,S_D1,S_47,0.895454545,20,Other,whole blood
+GSM1317964,"PAXgene whole blood, sepsis_survivor, Day_1, ID=48","PAXgene whole blood, sepsis_survivor, Day 1, ID=48",67,sepsis survivor,F,S_D1,S_48,0.654545455,19,Other,whole blood
+GSM1317965,"PAXgene whole blood, sepsis_survivor, Day_1, ID=49","PAXgene whole blood, sepsis_survivor, Day 1, ID=49",47,sepsis survivor,F,S_D1,S_49,0.734848485,20,Other,whole blood
+GSM1317966,"PAXgene whole blood, sepsis_survivor, Day_1, ID=50","PAXgene whole blood, sepsis_survivor, Day 1, ID=50",29,sepsis survivor,F,S_D1,S_50,0.8,13,Other,whole blood
+GSM1317967,"PAXgene whole blood, sepsis_survivor, Day_1, ID=51","PAXgene whole blood, sepsis_survivor, Day 1, ID=51",65,sepsis survivor,M,S_D1,S_51,0.5,23,Other,whole blood
+GSM1317968,"PAXgene whole blood, sepsis_survivor, Day_1, ID=52","PAXgene whole blood, sepsis_survivor, Day 1, ID=52",64,sepsis survivor,F,S_D1,S_52,0.861702128,17,lung,whole blood
+GSM1317969,"PAXgene whole blood, sepsis_survivor, Day_1, ID=53","PAXgene whole blood, sepsis_survivor, Day 1, ID=53",32,sepsis survivor,F,S_D1,S_53,0.795454545,12,Other,whole blood
+GSM1317970,"PAXgene whole blood, sepsis_survivor, Day_1, ID=54","PAXgene whole blood, sepsis_survivor, Day 1, ID=54",60,sepsis survivor,M,S_D1,S_54,0.96,15,lung,whole blood
+GSM1317971,"PAXgene whole blood, sepsis_survivor, Day_2, ID=30","PAXgene whole blood, sepsis_survivor, Day 2, ID=30",81,sepsis survivor,F,S_D2,S_30,0.682926829,24,blood,whole blood
+GSM1317972,"PAXgene whole blood, sepsis_survivor, Day_2, ID=31","PAXgene whole blood, sepsis_survivor, Day 2, ID=31",75,sepsis survivor,F,S_D2,S_31,0.879310345,24,lung,whole blood
+GSM1317973,"PAXgene whole blood, sepsis_survivor, Day_2, ID=32","PAXgene whole blood, sepsis_survivor, Day 2, ID=32",50,sepsis survivor,M,S_D2,S_32,0.702898551,20,Other,whole blood
+GSM1317974,"PAXgene whole blood, sepsis_survivor, Day_2, ID=33","PAXgene whole blood, sepsis_survivor, Day 2, ID=33",59,sepsis survivor,M,S_D2,S_33,0.827067669,33,lung,whole blood
+GSM1317975,"PAXgene whole blood, sepsis_survivor, Day_2, ID=34","PAXgene whole blood, sepsis_survivor, Day 2, ID=34",83,sepsis survivor,F,S_D2,S_34,0.905660377,21,UT,whole blood
+GSM1317976,"PAXgene whole blood, sepsis_survivor, Day_2, ID=35","PAXgene whole blood, sepsis_survivor, Day 2, ID=35",52,sepsis survivor,M,S_D2,S_35,0.807692308,16,lung,whole blood
+GSM1317977,"PAXgene whole blood, sepsis_survivor, Day_2, ID=36","PAXgene whole blood, sepsis_survivor, Day 2, ID=36",58,sepsis survivor,M,S_D2,S_36,0.789473684,23,Other,whole blood
+GSM1317978,"PAXgene whole blood, sepsis_survivor, Day_2, ID=37","PAXgene whole blood, sepsis_survivor, Day 2, ID=37",75,sepsis survivor,M,S_D2,S_37,0.917197452,19,UT,whole blood
+GSM1317979,"PAXgene whole blood, sepsis_survivor, Day_2, ID=38","PAXgene whole blood, sepsis_survivor, Day 2, ID=38",73,sepsis survivor,M,S_D2,S_38,0.855263158,10,lung,whole blood
+GSM1317980,"PAXgene whole blood, sepsis_survivor, Day_2, ID=39","PAXgene whole blood, sepsis_survivor, Day 2, ID=39",70,sepsis survivor,F,S_D2,S_39,0.727272727,16,lung,whole blood
+GSM1317981,"PAXgene whole blood, sepsis_survivor, Day_2, ID=40","PAXgene whole blood, sepsis_survivor, Day 2, ID=40",86,sepsis survivor,F,S_D2,S_40,0.901360544,18,UT,whole blood
+GSM1317982,"PAXgene whole blood, sepsis_survivor, Day_2, ID=41","PAXgene whole blood, sepsis_survivor, Day 2, ID=41",60,sepsis survivor,F,S_D2,S_41,0.833333333,17,lung,whole blood
+GSM1317983,"PAXgene whole blood, sepsis_survivor, Day_2, ID=42","PAXgene whole blood, sepsis_survivor, Day 2, ID=42",43,sepsis survivor,M,S_D2,S_42,0.703296703,9,lung,whole blood
+GSM1317984,"PAXgene whole blood, sepsis_survivor, Day_2, ID=43","PAXgene whole blood, sepsis_survivor, Day 2, ID=43",30,sepsis survivor,F,S_D2,S_43,0.777777778,15,lung,whole blood
+GSM1317985,"PAXgene whole blood, sepsis_survivor, Day_2, ID=45","PAXgene whole blood, sepsis_survivor, Day 2, ID=45",68,sepsis survivor,F,S_D2,S_45,0.911504425,32,blood,whole blood
+GSM1317986,"PAXgene whole blood, sepsis_survivor, Day_2, ID=46","PAXgene whole blood, sepsis_survivor, Day 2, ID=46",52,sepsis survivor,F,S_D2,S_46,0.800550206,25,lung,whole blood
+GSM1317987,"PAXgene whole blood, sepsis_survivor, Day_2, ID=47","PAXgene whole blood, sepsis_survivor, Day 2, ID=47",32,sepsis survivor,M,S_D2,S_47,0.866071429,20,Other,whole blood
+GSM1317988,"PAXgene whole blood, sepsis_survivor, Day_2, ID=48","PAXgene whole blood, sepsis_survivor, Day 2, ID=48",67,sepsis survivor,F,S_D2,S_48,0.64,19,Other,whole blood
+GSM1317989,"PAXgene whole blood, sepsis_survivor, Day_2, ID=49","PAXgene whole blood, sepsis_survivor, Day 2, ID=49",47,sepsis survivor,F,S_D2,S_49,0.837209302,20,Other,whole blood
+GSM1317990,"PAXgene whole blood, sepsis_survivor, Day_2, ID=50","PAXgene whole blood, sepsis_survivor, Day 2, ID=50",29,sepsis survivor,F,S_D2,S_50,0.888888889,13,Other,whole blood
+GSM1317991,"PAXgene whole blood, sepsis_survivor, Day_2, ID=51","PAXgene whole blood, sepsis_survivor, Day 2, ID=51",65,sepsis survivor,M,S_D2,S_51,0.769230769,23,Other,whole blood
+GSM1317992,"PAXgene whole blood, sepsis_survivor, Day_2, ID=52","PAXgene whole blood, sepsis_survivor, Day 2, ID=52",64,sepsis survivor,F,S_D2,S_52,0.702479339,17,lung,whole blood
+GSM1317993,"PAXgene whole blood, sepsis_survivor, Day_2, ID=53","PAXgene whole blood, sepsis_survivor, Day 2, ID=53",32,sepsis survivor,F,S_D2,S_53,0.846153846,12,Other,whole blood
+GSM1317994,"PAXgene whole blood, sepsis_survivor, Day_2, ID=54","PAXgene whole blood, sepsis_survivor, Day 2, ID=54",60,sepsis survivor,M,S_D2,S_54,0.84,15,lung,whole blood
+GSM1317995,"PAXgene whole blood, sepsis_survivor, Day_3, ID=30","PAXgene whole blood, sepsis_survivor, Day 3, ID=30",81,sepsis survivor,F,S_D3,S_30,0.738461538,24,blood,whole blood
+GSM1317996,"PAXgene whole blood, sepsis_survivor, Day_3, ID=31","PAXgene whole blood, sepsis_survivor, Day 3, ID=31",75,sepsis survivor,F,S_D3,S_31,0.704142012,24,lung,whole blood
+GSM1317997,"PAXgene whole blood, sepsis_survivor, Day_3, ID=32","PAXgene whole blood, sepsis_survivor, Day 3, ID=32",50,sepsis survivor,M,S_D3,S_32,0.710784314,20,Other,whole blood
+GSM1317998,"PAXgene whole blood, sepsis_survivor, Day_3, ID=33","PAXgene whole blood, sepsis_survivor, Day 3, ID=33",59,sepsis survivor,M,S_D3,S_33,0.835294118,33,lung,whole blood
+GSM1317999,"PAXgene whole blood, sepsis_survivor, Day_3, ID=34","PAXgene whole blood, sepsis_survivor, Day 3, ID=34",83,sepsis survivor,F,S_D3,S_34,0.770114943,21,UT,whole blood
+GSM1318000,"PAXgene whole blood, sepsis_survivor, Day_3, ID=35","PAXgene whole blood, sepsis_survivor, Day 3, ID=35",52,sepsis survivor,M,S_D3,S_35,0.792207792,16,lung,whole blood
+GSM1318001,"PAXgene whole blood, sepsis_survivor, Day_3, ID=36","PAXgene whole blood, sepsis_survivor, Day 3, ID=36",58,sepsis survivor,M,S_D3,S_36,0.789473684,23,Other,whole blood
+GSM1318002,"PAXgene whole blood, sepsis_survivor, Day_3, ID=38","PAXgene whole blood, sepsis_survivor, Day 3, ID=38",73,sepsis survivor,M,S_D3,S_38,0.822580645,10,lung,whole blood
+GSM1318003,"PAXgene whole blood, sepsis_survivor, Day_3, ID=39","PAXgene whole blood, sepsis_survivor, Day 3, ID=39",70,sepsis survivor,F,S_D3,S_39,0.797814208,16,lung,whole blood
+GSM1318004,"PAXgene whole blood, sepsis_survivor, Day_3, ID=42","PAXgene whole blood, sepsis_survivor, Day 3, ID=42",43,sepsis survivor,M,S_D3,S_42,0.654320988,9,lung,whole blood
+GSM1318005,"PAXgene whole blood, sepsis_survivor, Day_3, ID=43","PAXgene whole blood, sepsis_survivor, Day 3, ID=43",30,sepsis survivor,F,S_D3,S_43,0.62,15,lung,whole blood
+GSM1318006,"PAXgene whole blood, sepsis_survivor, Day_3, ID=45","PAXgene whole blood, sepsis_survivor, Day 3, ID=45",68,sepsis survivor,F,S_D3,S_45,0.835294118,32,blood,whole blood
+GSM1318007,"PAXgene whole blood, sepsis_survivor, Day_3, ID=46","PAXgene whole blood, sepsis_survivor, Day 3, ID=46",52,sepsis survivor,F,S_D3,S_46,0.972696246,25,lung,whole blood
+GSM1318008,"PAXgene whole blood, sepsis_survivor, Day_3, ID=47","PAXgene whole blood, sepsis_survivor, Day 3, ID=47",32,sepsis survivor,M,S_D3,S_47,0.841666667,20,Other,whole blood
+GSM1318009,"PAXgene whole blood, sepsis_survivor, Day_3, ID=48","PAXgene whole blood, sepsis_survivor, Day 3, ID=48",67,sepsis survivor,F,S_D3,S_48,0.811320755,19,Other,whole blood
+GSM1318010,"PAXgene whole blood, sepsis_survivor, Day_3, ID=49","PAXgene whole blood, sepsis_survivor, Day 3, ID=49",47,sepsis survivor,F,S_D3,S_49,0.763779528,20,Other,whole blood
+GSM1318011,"PAXgene whole blood, sepsis_survivor, Day_3, ID=50","PAXgene whole blood, sepsis_survivor, Day 3, ID=50",29,sepsis survivor,F,S_D3,S_50,0.880681818,13,Other,whole blood
+GSM1318012,"PAXgene whole blood, sepsis_survivor, Day_3, ID=51","PAXgene whole blood, sepsis_survivor, Day 3, ID=51",65,sepsis survivor,M,S_D3,S_51,0.8875,23,Other,whole blood
+GSM1318013,"PAXgene whole blood, sepsis_survivor, Day_3, ID=52","PAXgene whole blood, sepsis_survivor, Day 3, ID=52",64,sepsis survivor,F,S_D3,S_52,0.70212766,17,lung,whole blood
+GSM1318014,"PAXgene whole blood, sepsis_survivor, Day_3, ID=53","PAXgene whole blood, sepsis_survivor, Day 3, ID=53",32,sepsis survivor,F,S_D3,S_53,0.84375,12,Other,whole blood
+GSM1318015,"PAXgene whole blood, sepsis_survivor, Day_3, ID=54","PAXgene whole blood, sepsis_survivor, Day 3, ID=54",60,sepsis survivor,M,S_D3,S_54,0.96,15,lung,whole blood
+GSM1318016,"PAXgene whole blood, sepsis_survivor, Day_4, ID=30","PAXgene whole blood, sepsis_survivor, Day 4, ID=30",81,sepsis survivor,F,S_D4,S_30,0.62295082,24,blood,whole blood
+GSM1318017,"PAXgene whole blood, sepsis_survivor, Day_4, ID=33","PAXgene whole blood, sepsis_survivor, Day 4, ID=33",59,sepsis survivor,M,S_D4,S_33,0.829268293,33,lung,whole blood
+GSM1318018,"PAXgene whole blood, sepsis_survivor, Day_4, ID=35","PAXgene whole blood, sepsis_survivor, Day 4, ID=35",52,sepsis survivor,M,S_D4,S_35,0.77027027,16,lung,whole blood
+GSM1318019,"PAXgene whole blood, sepsis_survivor, Day_4, ID=39","PAXgene whole blood, sepsis_survivor, Day 4, ID=39",70,sepsis survivor,F,S_D4,S_39,0.802197802,16,lung,whole blood
+GSM1318020,"PAXgene whole blood, sepsis_survivor, Day_4, ID=41","PAXgene whole blood, sepsis_survivor, Day 4, ID=41",60,sepsis survivor,F,S_D4,S_41,0.901408451,17,lung,whole blood
+GSM1318021,"PAXgene whole blood, sepsis_survivor, Day_4, ID=42","PAXgene whole blood, sepsis_survivor, Day 4, ID=42",43,sepsis survivor,M,S_D4,S_42,0.551724138,9,lung,whole blood
+GSM1318022,"PAXgene whole blood, sepsis_survivor, Day_4, ID=43","PAXgene whole blood, sepsis_survivor, Day 4, ID=43",30,sepsis survivor,F,S_D4,S_43,0.633663366,15,lung,whole blood
+GSM1318023,"PAXgene whole blood, sepsis_survivor, Day_4, ID=45","PAXgene whole blood, sepsis_survivor, Day 4, ID=45",68,sepsis survivor,F,S_D4,S_45,0.766233766,32,blood,whole blood
+GSM1318024,"PAXgene whole blood, sepsis_survivor, Day_4, ID=46","PAXgene whole blood, sepsis_survivor, Day 4, ID=46",52,sepsis survivor,F,S_D4,S_46,0.956043956,25,lung,whole blood
+GSM1318025,"PAXgene whole blood, sepsis_survivor, Day_4, ID=48","PAXgene whole blood, sepsis_survivor, Day 4, ID=48",67,sepsis survivor,F,S_D4,S_48,0.898989899,19,Other,whole blood
+GSM1318026,"PAXgene whole blood, sepsis_survivor, Day_4, ID=49","PAXgene whole blood, sepsis_survivor, Day 4, ID=49",47,sepsis survivor,F,S_D4,S_49,0.747663551,20,Other,whole blood
+GSM1318027,"PAXgene whole blood, sepsis_survivor, Day_4, ID=50","PAXgene whole blood, sepsis_survivor, Day 4, ID=50",29,sepsis survivor,F,S_D4,S_50,0.85840708,13,Other,whole blood
+GSM1318028,"PAXgene whole blood, sepsis_survivor, Day_4, ID=51","PAXgene whole blood, sepsis_survivor, Day 4, ID=51",65,sepsis survivor,M,S_D4,S_51,0.833333333,23,Other,whole blood
+GSM1318029,"PAXgene whole blood, sepsis_survivor, Day_4, ID=54","PAXgene whole blood, sepsis_survivor, Day 4, ID=54",60,sepsis survivor,M,S_D4,S_54,0.88,15,lung,whole blood
+GSM1318030,"PAXgene whole blood, sepsis_survivor, Day_5, ID=30","PAXgene whole blood, sepsis_survivor, Day 5, ID=30",81,sepsis survivor,F,S_D5,S_30,0.717647059,24,blood,whole blood
+GSM1318031,"PAXgene whole blood, sepsis_survivor, Day_5, ID=33","PAXgene whole blood, sepsis_survivor, Day 5, ID=33",59,sepsis survivor,M,S_D5,S_33,0.837209302,33,lung,whole blood
+GSM1318032,"PAXgene whole blood, sepsis_survivor, Day_5, ID=35","PAXgene whole blood, sepsis_survivor, Day 5, ID=35",52,sepsis survivor,M,S_D5,S_35,0.804597701,16,lung,whole blood
+GSM1318033,"PAXgene whole blood, sepsis_survivor, Day_5, ID=42","PAXgene whole blood, sepsis_survivor, Day 5, ID=42",43,sepsis survivor,M,S_D5,S_42,0.579710145,9,lung,whole blood
+GSM1318034,"PAXgene whole blood, sepsis_survivor, Day_5, ID=43","PAXgene whole blood, sepsis_survivor, Day 5, ID=43",30,sepsis survivor,F,S_D5,S_43,NA,15,lung,whole blood
+GSM1318035,"PAXgene whole blood, sepsis_survivor, Day_5, ID=45","PAXgene whole blood, sepsis_survivor, Day 5, ID=45",68,sepsis survivor,F,S_D5,S_45,0.75,32,blood,whole blood
+GSM1318036,"PAXgene whole blood, sepsis_survivor, Day_5, ID=46","PAXgene whole blood, sepsis_survivor, Day 5, ID=46",52,sepsis survivor,F,S_D5,S_46,0.915254237,25,lung,whole blood
+GSM1318037,"PAXgene whole blood, sepsis_survivor, Day_5, ID=49","PAXgene whole blood, sepsis_survivor, Day 5, ID=49",47,sepsis survivor,F,S_D5,S_49,0.714285714,20,Other,whole blood
+GSM1318038,"PAXgene whole blood, sepsis_survivor, Day_5, ID=50","PAXgene whole blood, sepsis_survivor, Day 5, ID=50",29,sepsis survivor,F,S_D5,S_50,0.866666667,13,Other,whole blood
+GSM1318039,"PAXgene whole blood, sepsis_survivor, Day_5, ID=51","PAXgene whole blood, sepsis_survivor, Day 5, ID=51",65,sepsis survivor,M,S_D5,S_51,0.820809249,23,Other,whole blood
+GSM1318040,"PAXgene whole blood, sepsis_survivor, Day_5, ID=54","PAXgene whole blood, sepsis_survivor, Day 5, ID=54",60,sepsis survivor,M,S_D5,S_54,0.87,15,lung,whole blood
+GSM1318041,"PAXgene whole blood, Control, Day_5, ID=1","PAXgene whole blood, Control, Day 5, ID=1",42,healthy,F,HC_D5,HC_1,0.603689748,NA,NA,whole blood
+GSM1318042,"PAXgene whole blood, Control, Day_5, ID=2","PAXgene whole blood, Control, Day 5, ID=2",40,healthy,F,HC_D5,HC_2,0.5,NA,NA,whole blood
+GSM1318043,"PAXgene whole blood, Control, Day_5, ID=3","PAXgene whole blood, Control, Day 5, ID=3",66,healthy,M,HC_D5,HC_3,0.68,NA,NA,whole blood
+GSM1318044,"PAXgene whole blood, Control, Day_5, ID=4","PAXgene whole blood, Control, Day 5, ID=4",24,healthy,M,HC_D5,HC_4,0.611940299,NA,NA,whole blood
+GSM1318045,"PAXgene whole blood, Control, Day_5, ID=5","PAXgene whole blood, Control, Day 5, ID=5",70,healthy,F,HC_D5,HC_5,0.629213483,NA,NA,whole blood
+GSM1318046,"PAXgene whole blood, Control, Day_5, ID=6","PAXgene whole blood, Control, Day 5, ID=6",45,healthy,F,HC_D5,HC_6,0.597222222,NA,NA,whole blood
+GSM1318047,"PAXgene whole blood, Control, Day_5, ID=7","PAXgene whole blood, Control, Day 5, ID=7",60,healthy,F,HC_D5,HC_7,0.647058824,NA,NA,whole blood
+GSM1318048,"PAXgene whole blood, Control, Day_5, ID=8","PAXgene whole blood, Control, Day 5, ID=8",36,healthy,F,HC_D5,HC_8,0.515151515,NA,NA,whole blood
+GSM1318049,"PAXgene whole blood, Control, Day_5, ID=9","PAXgene whole blood, Control, Day 5, ID=9",47,healthy,M,HC_D5,HC_9,0.608695652,NA,NA,whole blood
+GSM1318050,"PAXgene whole blood, Control, Day_5, ID=10","PAXgene whole blood, Control, Day 5, ID=10",45,healthy,F,HC_D5,HC_10,0.58490566,NA,NA,whole blood
+GSM1318051,"PAXgene whole blood, Control, Day_5, ID=11","PAXgene whole blood, Control, Day 5, ID=11",58,healthy,F,HC_D5,HC_11,0.646341463,NA,NA,whole blood
+GSM1318052,"PAXgene whole blood, Control, Day_5, ID=12","PAXgene whole blood, Control, Day 5, ID=12",62,healthy,F,HC_D5,HC_12,0.677419355,NA,NA,whole blood
+GSM1318053,"PAXgene whole blood, Control, Day_5, ID=13","PAXgene whole blood, Control, Day 5, ID=13",24,healthy,M,HC_D5,HC_13,0.657142857,NA,NA,whole blood
+GSM1318054,"PAXgene whole blood, Control, Day_5, ID=14","PAXgene whole blood, Control, Day 5, ID=14",24,healthy,M,HC_D5,HC_14,0.596491228,NA,NA,whole blood
+GSM1318055,"PAXgene whole blood, Control, Day_5, ID=15","PAXgene whole blood, Control, Day 5, ID=15",25,healthy,F,HC_D5,HC_15,0.514285714,NA,NA,whole blood
+GSM1318056,"PAXgene whole blood, Control, Day_5, ID=16","PAXgene whole blood, Control, Day 5, ID=16",24,healthy,F,HC_D5,HC_16,0.671428571,NA,NA,whole blood
+GSM1318057,"PAXgene whole blood, Control, Day_5, ID=17","PAXgene whole blood, Control, Day 5, ID=17",27,healthy,F,HC_D5,HC_17,0.603689748,NA,NA,whole blood
+GSM1318058,"PAXgene whole blood, Control, Day_5, ID=18","PAXgene whole blood, Control, Day 5, ID=18",54,healthy,M,HC_D5,HC_18,0.52173913,NA,NA,whole blood

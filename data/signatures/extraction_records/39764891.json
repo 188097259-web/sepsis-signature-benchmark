@@ -1,0 +1,52 @@
+{
+ "pmid": "39764891",
+ "pmcid": null,
+ "first_author": "Wang Y",
+ "year": "2025",
+ "journal": "Mol Immunol",
+ "title": "Development of a ferroptosis-related gene prognostic model and molecular subgroups characterization in sepsis.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Wang2025_FRG3",
+   "model_type": "linear_cox",
+   "purpose": "mortality",
+   "outcome_definition": "28-day survival",
+   "genes": [
+    {
+     "symbol": "TFRC",
+     "coef": 1.72,
+     "direction": "risk"
+    },
+    {
+     "symbol": "DPP4",
+     "coef": 1.493,
+     "direction": "risk"
+    },
+    {
+     "symbol": "PRKCA",
+     "coef": 1.177,
+     "direction": "risk"
+    }
+   ],
+   "n_genes": 3,
+   "verbatim_formula": "FRG score = TFRC x 1.720 + DPP4 x 1.493 + PRKCA x 1.177",
+   "higher_score_means": "higher risk",
+   "cutoff": "optimal cutoff",
+   "source_location": "Methods",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training"
+  },
+  {
+   "accession": "GSE167363",
+   "role": "scRNA"
+  }
+ ],
+ "notes": "Full PDF read 2026-11-10. All coefficients positive."
+}

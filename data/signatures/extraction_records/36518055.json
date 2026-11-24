@@ -1,0 +1,40 @@
+{
+  "pmid": "36518055", "pmcid": "PMC9758714", "first_author": "Jiang S", "year": "2022", "journal": "J Zhejiang Univ Sci B",
+  "title": "Development and validation of novel inflammatory response-related gene signature for sepsis prognosis.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Jiang2022_IRRG9",
+      "model_type": "linear_cox",
+      "purpose": "survival",
+      "outcome_definition": "28-day survival",
+      "genes": [
+        {"symbol": "CCL22", "coef": 1.059, "direction": "risk"},
+        {"symbol": "CX3CL1", "coef": 1.227, "direction": "risk"},
+        {"symbol": "CXCR6", "coef": 0.460, "direction": "risk"},
+        {"symbol": "FFAR2", "coef": -0.789, "direction": "protective"},
+        {"symbol": "FPR1", "coef": 2.743, "direction": "risk"},
+        {"symbol": "HBEGF", "coef": 0.411, "direction": "risk"},
+        {"symbol": "ITGA5", "coef": -0.915, "direction": "protective"},
+        {"symbol": "RGS16", "coef": 0.565, "direction": "risk"},
+        {"symbol": "SELL", "coef": -1.733, "direction": "protective"}
+      ],
+      "n_genes": 9,
+      "verbatim_formula": "risk score=1.059×CCL22+1.227×CX3CL1+0.460×CXCR6-0.789×FFAR2+2.743×FPR1+0.411×HBEGF-0.915×ITGA5+0.565×RGS16-1.733×SELL",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "z-score of gene expression ('EXP gene ... adjusted by the Z-score')",
+      "cutoff": "median risk score (training set)",
+      "reported_performance": "28-day AUC: GSE65682 training (n=240) 0.866; GSE65682 validation (n=238) 0.858; GSE95233 (n=51) 0.813; C-index 0.73 (training)",
+      "source_location": "Methods (risk score) + Results (formula); read via PMC web page (WebFetch), not local XML",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 240},
+    {"accession": "GSE65682", "role": "internal_validation", "n_used": 238},
+    {"accession": "GSE95233", "role": "external_validation", "n_used": 51},
+    {"accession": "GSE64457", "role": "DEG_screening", "n_used": 23},
+    {"accession": "GSE69528", "role": "DEG_screening", "n_used": 138}
+  ],
+  "notes": "No local full text; extracted from the PMC article page via WebFetch (summarizing model output; formula re-fetched verbatim twice and consistent). Europe PMC reports the article as not open access, so no supplement downloaded. Abstract names only GSE64457/GSE69528 (GSEA sepsis vs healthy) and GSE95233; full text adds GSE65682 (478 patients with 28-d survival, random split 240/238) as modeling cohort. Coefficients from multivariate Cox after univariate Cox + LASSO-Cox in training set. Very high internal AUCs; verify coefficients against the PDF if possible."
+}

@@ -1,0 +1,102 @@
+{
+ "pmid": "40613299",
+ "pmcid": "",
+ "first_author": "Zhu B",
+ "year": "2025",
+ "journal": "Front Biosci (Landmark Ed)",
+ "title": "Multi-omics Analysis Reveals Molecular Subtype of Mitochondrial Oxidative Stress and Prognostic Model Development in Sepsis.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Zhu2025_MOSRG3",
+   "model_type": "linear_cox",
+   "purpose": "mortality",
+   "outcome_definition": "28-day survival",
+   "genes": [
+    {
+     "symbol": "CX3CR1",
+     "coef": -2.056,
+     "direction": "protective"
+    },
+    {
+     "symbol": "EPHX2",
+     "coef": -1.72,
+     "direction": "protective"
+    },
+    {
+     "symbol": "RNASE2",
+     "coef": 2.065,
+     "direction": "risk"
+    }
+   ],
+   "n_genes": 3,
+   "verbatim_formula": "MOSRG score = CX3CR1 x -2.056 + EPHX2 x -1.720 + RNASE2 x 2.065",
+   "higher_score_means": "higher risk",
+   "expression_scale_used": "GSE54514+GSE65682+GSE95233 merged and sva batch-corrected (scale unclear)",
+   "cutoff": "optimal cutoff for 28-day outcome (value not reported)",
+   "reported_performance": "All 479 SP: time-AUC 0.703/0.677/0.666 (7/14/28 d); training 0.706/0.678/0.663; validation 0.697/0.675/0.677",
+   "source_location": "Methods 2.4 (formula); Results 3.3-3.4; Figs. 3-4",
+   "released_code_or_model": null
+  },
+  {
+   "model_id": "Zhu2025_MOSRGcluster",
+   "model_type": "subtype_clustering",
+   "purpose": "subtype",
+   "outcome_definition": "K-means consensus clusters A (n=303) / B (n=176); A longer 28-day survival",
+   "genes": [
+    {
+     "symbol": "CX3CR1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "EPHX2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "RNASE2",
+     "coef": null,
+     "direction": "null"
+    }
+   ],
+   "n_genes": 3,
+   "verbatim_formula": "",
+   "higher_score_means": "unclear",
+   "expression_scale_used": "sva-corrected merged expression",
+   "cutoff": "ConsensusClusterPlus k=2",
+   "reported_performance": "Survival difference shown in figure (no numeric value)",
+   "source_location": "Methods 2.6; Results",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training",
+   "n_used": 479
+  },
+  {
+   "accession": "GSE65682",
+   "role": "internal_validation",
+   "n_used": null
+  },
+  {
+   "accession": "GSE54514",
+   "role": "DEG_screening",
+   "n_used": null
+  },
+  {
+   "accession": "GSE95233",
+   "role": "DEG_screening",
+   "n_used": null
+  },
+  {
+   "accession": "GSE167363",
+   "role": "scRNA",
+   "n_used": 7
+  }
+ ],
+ "notes": "Full text from publisher PDF (suppl/40613299/paper.pdf). The 479 sepsis samples with prognostic data (matches GSE65682) were split 7:3 (caret) into training/validation; this is internal only. GSE54514 and GSE95233 merged with GSE65682 for WGCNA/DEG (100 NC). Coefficients large, likely on batch-corrected scale. Subtype clustering uses the same 3 genes."
+}

@@ -1,0 +1,9 @@
+dataset,country,setting,platform,outcome,patients,deaths,healthy_controls,part1,part2,part3
+GSE65682 (MARS),Netherlands,ICU,"Affymetrix array, whole blood",Death by day 28,479,114 (23.8%),42,Training of random signatures,—,Index patients (not CTS)
+GSE185263,Canada (ICU); 4 countries (ED),ED and ICU,"RNA-seq, whole blood",In-hospital death,345,52 (15.1%),44,Main evaluation,Main,"Index patients (ICU, 80); ED patients and controls as partners"
+GSE63042 (CAPSOD),USA,ED,"RNA-seq, whole blood",Death by day 28 (sampled by outcome),106,28 (26.4%),0,Main evaluation,Main,—
+GSE236713,UK,ICU,"Agilent array, leukocytes",Death (window not reported),124,30 (24.2%),30,Main evaluation,Sensitivity only (gene-centred data),Index patients
+GSE272769,USA,ICU,"Affymetrix array, whole blood",Death within 30 days,161,60 (37.3%),0,Replication,Replication,—
+GSE95233,France,"ICU, septic shock","Affymetrix array, whole blood",Death by day 28,51,17 (33.3%),20,Sensitivity,—,Index patients
+GSE54514,Australia,ICU,"Illumina array, whole blood",Death (window not reported),35,9 (25.7%),18,Sensitivity,Accuracy check (measured neutrophils),Index patients
+CMAISE,China (32 centres),"Hospitalised sepsis, 4 severity strata","RNA-seq, whole blood",In-hospital death,355,47 (13.2%),0,Local validation (added after main results),Descriptive,—

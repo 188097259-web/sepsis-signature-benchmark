@@ -1,0 +1,182 @@
+{
+ "pmid": "41624884",
+ "pmcid": "PMC12852034",
+ "first_author": "Xie Y",
+ "year": "2025",
+ "journal": "Front Immunol",
+ "title": "Identification and validation of an endotoxin tolerance-based prognostic model with therapeutic insights in sepsis.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Xie2025_ETG10_Cox",
+   "model_type": "linear_cox",
+   "purpose": "mortality",
+   "outcome_definition": "28-day mortality/survival",
+   "genes": [
+    {
+     "symbol": "IL4R",
+     "coef": 0.032893669062406,
+     "direction": "risk"
+    },
+    {
+     "symbol": "ATM",
+     "coef": -0.309137796227894,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CX3CR1",
+     "coef": -0.237720552080183,
+     "direction": "protective"
+    },
+    {
+     "symbol": "F5",
+     "coef": -0.0793200673882997,
+     "direction": "protective"
+    },
+    {
+     "symbol": "ELANE",
+     "coef": 0.0968903151266514,
+     "direction": "risk"
+    },
+    {
+     "symbol": "ADRB2",
+     "coef": -0.224354506424999,
+     "direction": "protective"
+    },
+    {
+     "symbol": "TLR5",
+     "coef": -0.181943063486774,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CCL5",
+     "coef": -0.252376566454744,
+     "direction": "protective"
+    },
+    {
+     "symbol": "FCGR1A",
+     "coef": -0.17720306936071,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CARD16",
+     "coef": -0.123979346077383,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 10,
+   "verbatim_formula": "risk score = (0.032893669062406*IL4R -0.309137796227894*ATM - 0.237720552080183*CX3CR1 - 0.0793200673882997*F5 + 0.0968903151266514*ELANE - 0.224354506424999*ADRB2 - 0.181943063486774*TLR5 - 0.252376566454744*CCL5 - 0.17720306936071*FCGR1A - 0.123979346077383*CARD16)",
+   "higher_score_means": "higher risk",
+   "expression_scale_used": "RMA-normalized log2 microarray (GSE65682)",
+   "cutoff": "mean risk score in training cohort (-9.188638104)",
+   "reported_performance": "GSE65682 time-AUC 0.75/0.75/0.71 at 7/14/28 d; nomogram (age+score) 0.76/0.78/0.73, C-index 0.782",
+   "source_location": "Results 'Construction of a 28-day prognostic risk score model' (formula)",
+   "released_code_or_model": null
+  },
+  {
+   "model_id": "Xie2025_ETG10_LassoRF",
+   "model_type": "ml_classifier_not_reproducible",
+   "purpose": "mortality",
+   "outcome_definition": "28-day survival",
+   "genes": [
+    {
+     "symbol": "IL4R",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ATM",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CX3CR1",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "F5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ELANE",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "ADRB2",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "TLR5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CCL5",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "FCGR1A",
+     "coef": null,
+     "direction": "null"
+    },
+    {
+     "symbol": "CARD16",
+     "coef": null,
+     "direction": "null"
+    }
+   ],
+   "n_genes": 10,
+   "verbatim_formula": "",
+   "higher_score_means": "unclear",
+   "expression_scale_used": "RMA-normalized",
+   "cutoff": null,
+   "reported_performance": "Mean AUC 0.751 across GSE65682 (train), GSE95233 (test), E-MTAB-7581/4451/4421 (validation)",
+   "source_location": "Results; Fig. 2A",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training",
+   "n_used": 479
+  },
+  {
+   "accession": "GSE95233",
+   "role": "internal_validation",
+   "n_used": null
+  },
+  {
+   "accession": "E-MTAB-7581",
+   "role": "external_validation",
+   "n_used": null
+  },
+  {
+   "accession": "E-MTAB-4451",
+   "role": "external_validation",
+   "n_used": null
+  },
+  {
+   "accession": "E-MTAB-4421",
+   "role": "external_validation",
+   "n_used": null
+  },
+  {
+   "accession": "GSE174507",
+   "role": "other",
+   "n_used": null
+  },
+  {
+   "accession": "GSE217700",
+   "role": "other",
+   "n_used": null
+  }
+ ],
+ "notes": "Lasso+RF selected among 108 combos as best; the 10 genes were then refit in multivariate Cox to give the linear score (preferred for evaluation). GSE95233 labelled 'test set'. GSE174507 (miRNA) and GSE217700 (lncRNA) used for ceRNA network. Own ICU cohort n=50 for qPCR/flow validation."
+}

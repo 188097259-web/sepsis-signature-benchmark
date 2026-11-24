@@ -1,0 +1,117 @@
+{
+ "pmid": "38899838",
+ "pmcid": "",
+ "first_author": "Chen H",
+ "year": "2024",
+ "journal": "Shock",
+ "title": "IDENTIFICATION OF A NOVEL SEPSIS PROGNOSIS MODEL: BASED ON TRANSCRIPTOME AND PROTEOME ANALYSIS.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Chen2024_OSDEG16",
+   "model_type": "linear_cox",
+   "purpose": "mortality",
+   "outcome_definition": "28-day survival",
+   "genes": [
+    {
+     "symbol": "RETN",
+     "coef": 0.088,
+     "direction": "risk"
+    },
+    {
+     "symbol": "MYL6B",
+     "coef": 0.35,
+     "direction": "risk"
+    },
+    {
+     "symbol": "PTX3",
+     "coef": 0.212,
+     "direction": "risk"
+    },
+    {
+     "symbol": "HCK",
+     "coef": -0.604,
+     "direction": "protective"
+    },
+    {
+     "symbol": "CEBPB",
+     "coef": 0.677,
+     "direction": "risk"
+    },
+    {
+     "symbol": "TPST1",
+     "coef": 0.194,
+     "direction": "risk"
+    },
+    {
+     "symbol": "SLPI",
+     "coef": -0.077,
+     "direction": "protective"
+    },
+    {
+     "symbol": "SNX3",
+     "coef": -0.986,
+     "direction": "protective"
+    },
+    {
+     "symbol": "FES",
+     "coef": -0.294,
+     "direction": "protective"
+    },
+    {
+     "symbol": "SAE1",
+     "coef": 0.203,
+     "direction": "risk"
+    },
+    {
+     "symbol": "RASA3",
+     "coef": -0.469,
+     "direction": "protective"
+    },
+    {
+     "symbol": "RBM26",
+     "coef": -0.841,
+     "direction": "protective"
+    },
+    {
+     "symbol": "ACTN4",
+     "coef": -0.343,
+     "direction": "protective"
+    },
+    {
+     "symbol": "PEPD",
+     "coef": -0.362,
+     "direction": "protective"
+    },
+    {
+     "symbol": "UBA7",
+     "coef": -0.339,
+     "direction": "protective"
+    },
+    {
+     "symbol": "APOL1",
+     "coef": -0.117,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 16,
+   "verbatim_formula": "risk score = (0.088 x RETN) + (0.35 x MYL6B) + ... + (-0.117 x APOL1)",
+   "higher_score_means": "higher risk",
+   "cutoff": "median",
+   "source_location": "Results 3.2",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training/internal_validation"
+  },
+  {
+   "accession": "GSE95233",
+   "role": "external_validation"
+  }
+ ],
+ "notes": "Full PDF (accepted manuscript) read 2026-11-10."
+}

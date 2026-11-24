@@ -1,0 +1,40 @@
+{
+  "pmid": "41783141", "pmcid": "PMC12953455", "first_author": "Xue H", "year": "2026", "journal": "Front Mol Biosci",
+  "title": "Construction of a robust sepsis prognostic classifier based on E3 ubiquitin ligase-related genes.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Xue2026_URS3",
+      "model_type": "linear_cox",
+      "purpose": "mortality",
+      "outcome_definition": "survival / mortality (GSE65682 follow-up displayed to 25 days; GSE95233 and in-house GSE294985 survival status)",
+      "genes": [
+        {"symbol": "HLA-DRB1", "coef": -0.19, "direction": "protective"},
+        {"symbol": "LTB", "coef": -0.28, "direction": "protective"},
+        {"symbol": "TCP11L2", "coef": 0.27, "direction": "risk"}
+      ],
+      "n_genes": 3,
+      "verbatim_formula": "URS = HLA-DRB1 x (-0.19) + LTB x (-0.28) + TCP11L2 x (0.27)",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "unclear (GSE65682 array expression; in-house RNA-seq for GSE294985; normalization not stated)",
+      "cutoff": "median URS in training set GSE65682",
+      "reported_performance": "GSE65682 training: KM significant; prognostic AUC 0.656 (Nomogram with clinical variables 0.706). GSE95233 and GSE294985 (n=30 sepsis): significant KM separation (p in figures). Meta-analysis pooled HR 3.21 (1.26-8.14) for continuous URS, 2.58 (1.67-3.98) for high vs low group.",
+      "source_location": "Results 'Establishment of ubiquitination-related sepsis prognostic model' (formula) + Fig. 4H, Fig. 5, Suppl Fig. S3",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 802},
+    {"accession": "GSE95233", "role": "external_validation", "n_used": null},
+    {"accession": "GSE294985", "role": "external_validation", "n_used": 40},
+    {"accession": "GSE54514", "role": "other", "n_used": null},
+    {"accession": "GSE131761", "role": "other", "n_used": null},
+    {"accession": "GSE137340", "role": "other", "n_used": null},
+    {"accession": "GSE236713", "role": "other", "n_used": null},
+    {"accession": "GSE28750", "role": "other", "n_used": null},
+    {"accession": "GSE57065", "role": "other", "n_used": null},
+    {"accession": "GSE69528", "role": "other", "n_used": null},
+    {"accession": "GSE175453", "role": "scRNA", "n_used": 9}
+  ],
+  "notes": "Pipeline: limma DEGs in GSE65682 (sepsis vs control) x 997 E3 ligase genes -> univariate Cox (37 genes) -> consensus clustering of all 802 GSE65682 samples (and separately GSE95233) into 2 clusters with different survival -> DEGs between clusters + univariate Cox (94) -> LASSO/CoxBoost/RSF consensus (8 genes) -> multivariable Cox; the final formula contains only 3 genes although text says Cox was run on 8 (selection step to 3 not described). 'Other' role cohorts (GSE54514, GSE131761, GSE137340, GSE236713, GSE28750, GSE57065, GSE69528) were used for diagnostic ROC/meta-analysis of URS, LTB and TCP11L2 - GSE236713 (target cohort) and GSE54514 were thus used for this model (diagnosis only). GSE95233 also re-clustered and used for prognostic validation. In-house GSE294985: 30 sepsis + 10 healthy. The 37-gene cluster model gene list is only in Supplementary Table S2 (not downloaded) and clusters were derived including healthy controls, so not recorded as a separate model."
+}

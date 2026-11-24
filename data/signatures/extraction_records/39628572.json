@@ -1,0 +1,39 @@
+{
+  "pmid": "39628572", "pmcid": "PMC11613189", "first_author": "Long Q", "year": "2024", "journal": "iScience",
+  "title": "A transcriptome-based risk model in sepsis enables prognostic prediction and drug repositioning.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Long2024_4gene",
+      "model_type": "lasso_linear",
+      "purpose": "mortality",
+      "outcome_definition": "28-day mortality",
+      "genes": [
+        {"symbol": "ABLIM1", "coef": -0.0678, "direction": "protective"},
+        {"symbol": "HPGD", "coef": 0.0825, "direction": "risk"},
+        {"symbol": "LY96", "coef": 0.1607, "direction": "risk"},
+        {"symbol": "OLAH", "coef": 0.1463, "direction": "risk"}
+      ],
+      "n_genes": 4,
+      "verbatim_formula": "risk score = −0.0678 ∗ ABLIM1 + 0.0825 ∗ HPGD + 0.1607 ∗ LY96 + 0.1463 ∗ OLAH",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "log-transformed, normalized expression (per dataset)",
+      "cutoff": "median risk score within each cohort",
+      "reported_performance": "28-day mortality AUC: E-MTAB-5273 discovery 0.70; E-MTAB-4451 0.67; GSE63042 (E-GEOD-63042) 0.61; GSE65682 (E-GEOD-65682) 0.62; diagnosis AUC 0.99 in E-MTAB-5273",
+      "source_location": "Results 'Identification of prognostic genes and development of a risk score' (formula) + Figure 1F + Figure 2",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "E-MTAB-5273", "role": "training", "n_used": null},
+    {"accession": "E-MTAB-1548", "role": "DEG_screening", "n_used": null},
+    {"accession": "GSE28750", "role": "DEG_screening", "n_used": null},
+    {"accession": "E-MTAB-4451", "role": "external_validation", "n_used": 106},
+    {"accession": "GSE63042", "role": "external_validation", "n_used": 106},
+    {"accession": "GSE65682", "role": "external_validation", "n_used": null},
+    {"accession": "E-MTAB-7581", "role": "other", "n_used": null},
+    {"accession": "GSE167363", "role": "scRNA", "n_used": null},
+    {"accession": "EGAS00001006283", "role": "scRNA", "n_used": null}
+  ],
+  "notes": "LASSO (logistic, lambda ~0.03) on 20 genes from univariate logistic regression in discovery set E-MTAB-5273. GSE28750, GSE63042, GSE65682 are referred to by their ArrayExpress mirrors E-GEOD-28750/63042/65682 (text also writes 'E-MTAB-65682'). E-MTAB-7581 (VANISH) used for treatment-interaction analysis. Paper reports GSE63042 deaths 10/53 in HR vs 18/53 in LR (opposite to claim; p=0.78) - as printed. Exact cohort n not in main text (Table S1 in supplement). 'This paper does not report original code.'"
+}

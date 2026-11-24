@@ -1,0 +1,35 @@
+{
+  "pmid": "42723823", "pmcid": "PMC13557957", "first_author": "Luo L", "year": "2026", "journal": "Front Immunol",
+  "title": "A high-risk sepsis subtype identified by regulated cell death signatures and MAD2L2 validation.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Luo2026_RCDscore6",
+      "model_type": "lasso_linear",
+      "purpose": "prognosis",
+      "outcome_definition": "28-day mortality / survival (score was trained to identify high-risk RCD Cluster 3, then evaluated for 28-day mortality)",
+      "genes": [
+        {"symbol": "SMC4", "coef": 0.62866891, "direction": "risk"},
+        {"symbol": "SLC5A6", "coef": 0.09686988, "direction": "risk"},
+        {"symbol": "POLR3GL", "coef": 0.78221070, "direction": "risk"},
+        {"symbol": "MAD2L2", "coef": 0.48498784, "direction": "risk"},
+        {"symbol": "EXOC7", "coef": 0.97065706, "direction": "risk"},
+        {"symbol": "COG1", "coef": 0.32175031, "direction": "risk"}
+      ],
+      "n_genes": 6,
+      "verbatim_formula": "RCD.score = SMC4 x 0.62866891 + SLC5A6 x 0.09686988 + POLR3GL x 0.78221070 + MAD2L2 x 0.48498784 + EXOC7 x 0.97065706 + COG1 x 0.32175031",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "GSE65682 series-matrix values processed with GEOquery/limma (log2 array scale; highest-mean probe per gene); RCD.score medians ~17-23; standardized per 1 SD only for Cox HRs",
+      "cutoff": "optimal cutpoint in GSE65682 (value not stated; 75 high / 404 low); GSE54514 used cohort median",
+      "reported_performance": "GSE65682 (n=479, 114 deaths): 28-day mortality AUC 0.575 (optimism-corrected 0.577); KM high vs low p=0.00082; HR per SD 1.26 (1.05-1.50), age/sex-adjusted 1.23, attenuated after MARS adjustment (HR 0.99). Cluster 3 discrimination AUC 0.981. External GSE54514 Day-1 (n=35, 9 deaths): survival AUC 0.692 (0.473-0.912); no gain over APACHE II (AUC 0.776 vs 0.774).",
+      "source_location": "Methods 'Candidate-gene prioritization and RCD.score construction'; Results + Fig. 4; coefficients in Supplementary Table S11 (Table3.xlsx) and 'Six_gene_formula' sheet (Table5.xlsx)",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 479},
+    {"accession": "GSE54514", "role": "external_validation", "n_used": 35},
+    {"accession": "GSE167363", "role": "scRNA", "n_used": 7}
+  ],
+  "notes": "Coefficients taken from supplementary files downloaded via Europe PMC (signatures/extraction/suppl/42723823/x/Table3.xlsx sheet S11 and Table5.xlsx sheet Six_gene_formula; the two agree). They are the LASSO coefficients of a 31-gene LASSO model classifying Cluster 3 vs other clusters (lambda=0.00379); only the 6 consensus genes (LASSO + top-30 RF + top-30 XGBoost) are used in the score, without refitting. All coefficients positive; 'risk' direction reflects higher score = Cluster 3 / higher mortality, not individually tested gene HRs. Underlying subtype model = consensus clustering of 4929 RCD compendium genes in 479 GSE65682 patients (4 clusters; Cluster 3 worst 28-day survival, log-rank p=0.034) - not recorded separately (gene set too large/compendium-defined, no centroids). GSE65682 healthy controls also used for expression comparisons. Authors note mortality discrimination of RCD.score is limited."
+}

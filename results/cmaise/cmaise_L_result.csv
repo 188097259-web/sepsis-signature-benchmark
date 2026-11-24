@@ -1,0 +1,5 @@
+item,estimate,lo,hi,rule,met
+L1,-0.0156546427306252,-0.0512835541483881,0.0135140216423582,upper 95% CI of Delta < 0.05,TRUE
+L2,0.588641113163701,0.543666984399399,0.638653044082924,lower 95% CI of E1 > 0.50,TRUE
+difference_vs_main,0.00914914922277132,-0.0328687632328614,0.0452655136452285,Delta_CMAISE - Delta_main (paired bootstrap),
+consistency_replication_rule,,,,same sign as main Delta and |difference| < 0.05,TRUE

@@ -1,0 +1,60 @@
+{
+ "pmid": "40651437",
+ "pmcid": null,
+ "first_author": "Li Y",
+ "year": "2025",
+ "journal": "Int Immunopharmacol",
+ "title": "Identification and prognostic potential of lactylation-related genes in sepsis: implications of the RBM25-acly axis.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Li2025_LRG5",
+   "model_type": "lasso_linear",
+   "purpose": "mortality",
+   "outcome_definition": "28-day survival",
+   "genes": [
+    {
+     "symbol": "ZC3H4",
+     "coef": 0.9809,
+     "direction": "risk"
+    },
+    {
+     "symbol": "RBM10",
+     "coef": 0.1835,
+     "direction": "risk"
+    },
+    {
+     "symbol": "PCBP2",
+     "coef": 0.7914,
+     "direction": "risk"
+    },
+    {
+     "symbol": "RBM25",
+     "coef": 0.2879,
+     "direction": "risk"
+    },
+    {
+     "symbol": "HNRNPM",
+     "coef": 0.5471,
+     "direction": "risk"
+    }
+   ],
+   "n_genes": 5,
+   "verbatim_formula": "Risk score = 15.0881 + 0.9809*ZC3H4 + 0.1835*RBM10 + 0.7914*PCBP2 + 0.2879*RBM25 + 0.5471*HNRNPM",
+   "higher_score_means": "higher risk",
+   "expression_scale_used": "quantile-normalized GSE65682 values",
+   "cutoff": "median",
+   "reported_performance": "training AUC 0.739/0.721/0.738 (7/14/28 d); test sets 0.655, 0.608 at 28 d",
+   "source_location": "Results 2.2",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training/internal_validation"
+  }
+ ],
+ "notes": "Full PDF read 2026-11-10. Abstract-only verdict 'diagnosis_only' was wrong; it is a 28-day prognostic LASSO-Cox model. Intercept irrelevant to AUROC."
+}

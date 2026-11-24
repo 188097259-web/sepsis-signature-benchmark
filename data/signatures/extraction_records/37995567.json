@@ -1,0 +1,62 @@
+{
+ "pmid": "37995567",
+ "pmcid": null,
+ "first_author": "Shu Q",
+ "year": "2024",
+ "journal": "Int Immunopharmacol",
+ "title": "Construction and validation of a mitochondria-associated genes prognostic signature and immune microenvironment characteristic of sepsis.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Shu2024_MiAG5",
+   "model_type": "linear_cox",
+   "purpose": "mortality",
+   "outcome_definition": "28-day survival",
+   "genes": [
+    {
+     "symbol": "TTC19",
+     "coef": -1.54,
+     "direction": "protective"
+    },
+    {
+     "symbol": "COX7B",
+     "coef": 1.87,
+     "direction": "risk"
+    },
+    {
+     "symbol": "PPM1K",
+     "coef": -1.06,
+     "direction": "protective"
+    },
+    {
+     "symbol": "NME4",
+     "coef": 1.11,
+     "direction": "risk"
+    },
+    {
+     "symbol": "MAOA",
+     "coef": 0.7,
+     "direction": "risk"
+    }
+   ],
+   "n_genes": 5,
+   "verbatim_formula": "MiAG score = TTC19 x (-1.54) + COX7b x (1.87) + PPM1K x (-1.06) + NME4 x (1.11) + MAOA x (0.70)",
+   "higher_score_means": "higher risk",
+   "cutoff": "median",
+   "source_location": "Methods, MiAG score",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training"
+  },
+  {
+   "accession": "GSE167363",
+   "role": "scRNA"
+  }
+ ],
+ "notes": "Full PDF read 2026-11-10. 7:3 internal split of GSE65682."
+}

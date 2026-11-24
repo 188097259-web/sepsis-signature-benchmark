@@ -1,0 +1,76 @@
+{
+ "pmid": "39281624",
+ "pmcid": "PMC11400959",
+ "first_author": "Wu J",
+ "year": "2024",
+ "journal": "Heliyon",
+ "title": "Construction of a NETosis-related gene signature for predicting the prognostic status of sepsis patients.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Wu2024_NETosis5",
+   "model_type": "linear_cox",
+   "purpose": "survival",
+   "outcome_definition": "overall survival in GSE65682 (28-day follow-up); time ROC at 7/14/21 days",
+   "genes": [
+    {
+     "symbol": "CEACAM8",
+     "coef": 0.3157438,
+     "direction": "risk"
+    },
+    {
+     "symbol": "PGLYRP1",
+     "coef": -0.1785755,
+     "direction": "protective"
+    },
+    {
+     "symbol": "MAPK14",
+     "coef": -0.4634681,
+     "direction": "protective"
+    },
+    {
+     "symbol": "S100A12",
+     "coef": 0.7774074,
+     "direction": "risk"
+    },
+    {
+     "symbol": "LCN2",
+     "coef": -0.1577366,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 5,
+   "verbatim_formula": "Riskscore = 0.3157438*CEACAM8 - 0.1785755*PGLYRP1 - 0.4634681*MAPK14 + 0.7774074*S100A12 - 0.1577366*LCN2",
+   "higher_score_means": "higher risk",
+   "expression_scale_used": "GEO processed expression; risk score then z-score standardized",
+   "cutoff": "high (n=254) vs low (n=225) groups; cutoff method not stated",
+   "reported_performance": "GSE65682 time-ROC AUCs at 7/14/21 d described as high (values in figure); KM separation in GSE95233; survivors lower score in GSE185263 and GSE95233",
+   "source_location": "Results 'Establishment and verification of clinical prognostic model' (formula), Fig. 7",
+   "released_code_or_model": null
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE57065",
+   "role": "DEG_screening",
+   "n_used": 107
+  },
+  {
+   "accession": "GSE65682",
+   "role": "training",
+   "n_used": 479
+  },
+  {
+   "accession": "GSE95233",
+   "role": "external_validation",
+   "n_used": null
+  },
+  {
+   "accession": "GSE185263",
+   "role": "external_validation",
+   "n_used": null
+  }
+ ],
+ "notes": "Methods say n=7 and 'Cox regression coefficient' from stepwise regression; final model has 5 genes. WGCNA/DEG/PPI on GSE57065. GSE185263 used for risk score vs survival status comparison -> cannot be used for evaluation. ssGSEA programmed-death analyses also run on all four datasets."
+}

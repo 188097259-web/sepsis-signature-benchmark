@@ -1,0 +1,96 @@
+{
+ "pmid": "38011291",
+ "pmcid": "PMC10713427",
+ "first_author": "Liu J",
+ "year": "2023",
+ "journal": "Aging (Albany NY)",
+ "title": "Predicting the prognosis in patients with sepsis by an endoplasmic reticulum stress gene signature.",
+ "eligible": true,
+ "exclusion_reason": null,
+ "models": [
+  {
+   "model_id": "Liu2023_ERS10",
+   "model_type": "linear_cox",
+   "purpose": "survival",
+   "outcome_definition": "28-day survival (GSE65682 follow-up)",
+   "genes": [
+    {
+     "symbol": "ADRB2",
+     "coef": -0.66117,
+     "direction": "protective"
+    },
+    {
+     "symbol": "DHCR7",
+     "coef": 0.23933,
+     "direction": "risk"
+    },
+    {
+     "symbol": "GABARAPL2",
+     "coef": -1.08258,
+     "direction": "protective"
+    },
+    {
+     "symbol": "MAOA",
+     "coef": 0.30108,
+     "direction": "risk"
+    },
+    {
+     "symbol": "MPO",
+     "coef": 0.12385,
+     "direction": "risk"
+    },
+    {
+     "symbol": "PDZD8",
+     "coef": 0.92966,
+     "direction": "risk"
+    },
+    {
+     "symbol": "QDPR",
+     "coef": -0.53967,
+     "direction": "protective"
+    },
+    {
+     "symbol": "SCAP",
+     "coef": -0.6325,
+     "direction": "protective"
+    },
+    {
+     "symbol": "TFRC",
+     "coef": 0.30857,
+     "direction": "risk"
+    },
+    {
+     "symbol": "TLR4",
+     "coef": -0.53252,
+     "direction": "protective"
+    }
+   ],
+   "n_genes": 10,
+   "verbatim_formula": "risk score = (-0.66117 x ADRB2) + (0.23933 x DHCR7) + (-1.08258 x GABARAPL2) + (0.30108 x MAOA) + (0.12385 x MPO) + (0.92966 x PDZD8) + (-0.53967 x QDPR) + (-0.63250 x SCAP) + (0.30857 x TFRC) + (-0.53252 x TLR4)",
+   "higher_score_means": "higher risk",
+   "expression_scale_used": "GEO processed expression, probe mean per gene (scale not further specified)",
+   "cutoff": "median of training set",
+   "reported_performance": "AUC 0.800 training (n=288), 0.802 validation (n=191), 0.660 GSE95233 (n=51)",
+   "source_location": "Results 'Construction of ERG prognostic signature'",
+   "released_code_or_model": "https://predict2023.shinyapps.io/survival/ (nomogram calculator)"
+  }
+ ],
+ "cohorts_used": [
+  {
+   "accession": "GSE65682",
+   "role": "training",
+   "n_used": 288
+  },
+  {
+   "accession": "GSE65682",
+   "role": "internal_validation",
+   "n_used": 191
+  },
+  {
+   "accession": "GSE95233",
+   "role": "external_validation",
+   "n_used": 51
+  }
+ ],
+ "notes": "GSE65682 479 survival patients split 6:4 (caret). DEGs from 42 controls vs 760 sepsis in GSE65682. Single-gene meta-analysis via BIDOS database (component GEO cohorts not named)."
+}

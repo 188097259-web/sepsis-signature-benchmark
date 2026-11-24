@@ -1,0 +1,10 @@
+mitochondrial rows removed: 40; median mito counts per sample A = 0, B = 226389.5
+mapped genes: 36319
+batch A: 237 patients, 34 deaths, 15574 genes after filter, 19 centres
+batch B: 118 patients, 13 deaths, 15250 genes after filter, 13 centres
+score matrices: 36057 models; published signatures scorable in both batches: 35 of 36
+coverage < 80%: Jiang2022_IRRG9 A = 0.778, B = 0.778
+published signatures not scorable in batch A / B: Jiang2022_IRRG9 / Jiang2022_IRRG9; matched random rows excluded from at least one batch: 631
+E3: 2 of 36 published signatures above the 95th percentile of their matched random signatures
+batch A LM22 genes used: 440; median neutrophil 0.686
+batch B LM22 genes used: 433; median neutrophil 0.598

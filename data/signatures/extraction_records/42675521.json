@@ -1,0 +1,43 @@
+{
+  "pmid": "42675521", "pmcid": "PMC13528130", "first_author": "Liu X", "year": "2026", "journal": "J Intensive Care",
+  "title": "Role and prognostic value of N6-methyladenosine RNA modification regulators in glycolytic reprogramming during sepsis.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Liu2026_m6A4",
+      "model_type": "lasso_linear",
+      "purpose": "mortality",
+      "outcome_definition": "28-day mortality (7/14/21/28-day time-dependent ROC)",
+      "genes": [
+        {"symbol": "HNRNPC", "coef": -0.266, "direction": "protective"},
+        {"symbol": "YTHDF1", "coef": -0.117, "direction": "protective"},
+        {"symbol": "YTHDF2", "coef": -0.078, "direction": "protective"},
+        {"symbol": "VIRMA", "coef": -0.071, "direction": "protective"}
+      ],
+      "n_genes": 4,
+      "verbatim_formula": "Risk Score = −0.266 × HNRNPC − 0.117 × YTHDF1 − 0.078 × YTHDF2 − 0.071 × VIRMA",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "normalized array expression after ComBat cross-cohort batch correction (GSE65682/GSE95233/GSE54514)",
+      "cutoff": "median risk score",
+      "reported_performance": "C-index: GSE65682 training (70%) 0.750; internal validation (30%) 0.706; GSE95233 0.718; GSE54514 0.709 (log-rank P=0.245 in GSE54514); tdAUCs in Figure 8 / Suppl Table S4",
+      "source_location": "Methods 'Prognostic model' + Results (formula) + Figure 8 + Supplementary Table S4",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": null},
+    {"accession": "GSE65682", "role": "internal_validation", "n_used": null},
+    {"accession": "GSE65682", "role": "DEG_screening", "n_used": 802},
+    {"accession": "GSE95233", "role": "external_validation", "n_used": null},
+    {"accession": "GSE95233", "role": "DEG_screening", "n_used": null},
+    {"accession": "GSE54514", "role": "external_validation", "n_used": 35},
+    {"accession": "GSE54514", "role": "DEG_screening", "n_used": null},
+    {"accession": "GSE147363", "role": "scRNA", "n_used": null},
+    {"accession": "GSE198316", "role": "other", "n_used": null},
+    {"accession": "GSE224650", "role": "other", "n_used": null},
+    {"accession": "GSE225143", "role": "other", "n_used": null},
+    {"accession": "GSE201060", "role": "other", "n_used": null},
+    {"accession": "GSE127732", "role": "other", "n_used": null}
+  ],
+  "notes": "GSE65682 split 7:3 random. All three sepsis cohorts were ComBat-corrected jointly and used for differential expression; coefficients may depend on that batch-corrected scale. GSE198316/GSE224650 (ALKBH5-KO macrophages) and GSE225143/GSE201060/GSE127732 (m6A-seq) are non-sepsis mechanistic datasets. scRNA dataset is written 'GSE147363' (possibly meant GSE167363) - recorded as stated. Code on request only."
+}

@@ -1,0 +1,34 @@
+{
+  "pmid": "41361350", "pmcid": "PMC12686514", "first_author": "Xiong W", "year": "2025", "journal": "Sci Rep",
+  "title": "Ferritinophagy-related prognostic genes UBE2Q1, NEDD4L, and TCP11L2 for prognosis prediction in sepsis.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Xiong2025_Ferritinophagy3",
+      "model_type": "lasso_linear",
+      "purpose": "survival",
+      "outcome_definition": "overall survival in GSE65682 (28-day follow-up; time ROC at 9, 18, 27 days)",
+      "genes": [
+        {"symbol": "UBE2Q1", "coef": -1.401702039, "direction": "protective"},
+        {"symbol": "NEDD4L", "coef": 0.288855044, "direction": "risk"},
+        {"symbol": "TCP11L2", "coef": 0.513506055, "direction": "risk"}
+      ],
+      "n_genes": 3,
+      "verbatim_formula": "risk score = UBE2Q1 x (-1.401702039) + NEDD4L x (0.288855044) + TCP11L2 x (0.513506055)",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "unclear (GSE65682 GPL13667 expression as downloaded; no transformation stated)",
+      "cutoff": "median risk score in training set",
+      "reported_performance": "GSE65682 training (70% of 479): KM p=0.012; time AUC 0.65 (9 d), 0.64 (18 d), 0.63 (27 d). GSE65682 validation (30%): 'similar' (Fig. S2, values not in text).",
+      "source_location": "Methods 'Construction of risk model' + Results paragraph with formula (Table S9) + Fig. 3",
+      "released_code_or_model": "https://pan.baidu.com/s/1aCBDCFEjVMZda-JM0l9ukA (extraction code 1234; R script and supplementary materials, not checked)"
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": null},
+    {"accession": "GSE65682", "role": "internal_validation", "n_used": null},
+    {"accession": "GSE167363", "role": "scRNA", "n_used": 12},
+    {"accession": "GSE154918", "role": "other", "n_used": null},
+    {"accession": "GSE134347", "role": "other", "n_used": null}
+  ],
+  "notes": "479 GSE65682 patients with survival split 7:3 (exact n per split not stated). Candidate genes from DEG (GSE65682 sepsis vs control) + WGCNA on ferritinophagy ssGSEA score + Mendelian randomization (eQTL / ieu-b-4980 GWAS) -> univariate Cox (p<0.01, PH test) -> LASSO kept all 3 genes; coefficients are LASSO coefs (lambda.min=0.01648664). A nomogram on the 3 genes was also built but its stated target ('risk of sepsis') and coefficients are unclear; not recorded separately. Data-availability statement names GSE154918 and GSE134347, which are not otherwise mentioned in methods/results (possibly a boilerplate error) - listed as 'other' to be conservative. Methods text typo 'GSE165682' = GSE65682."
+}

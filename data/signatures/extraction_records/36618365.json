@@ -1,0 +1,68 @@
+{
+  "pmid": "36618365", "pmcid": "PMC9811195", "first_author": "Liang S", "year": "2022", "journal": "Front Immunol",
+  "title": "Predicting the prognosis in patients with sepsis by a pyroptosis-related gene signature.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Liang2022_pyroptosis6",
+      "model_type": "lasso_linear",
+      "purpose": "survival",
+      "outcome_definition": "28-day survival (time-to-event; 7/14/28-day time-dependent ROC); 28-day mortality in GSE95233",
+      "genes": [
+        {"symbol": "GZMB", "coef": -0.01470407, "direction": "protective"},
+        {"symbol": "CHMP7", "coef": -0.63970285, "direction": "protective"},
+        {"symbol": "NLRP1", "coef": -0.12447921, "direction": "protective"},
+        {"symbol": "MYD88", "coef": -0.18172740, "direction": "protective"},
+        {"symbol": "ELANE", "coef": 0.07255413, "direction": "risk"},
+        {"symbol": "AIM2", "coef": -0.16451424, "direction": "protective"}
+      ],
+      "n_genes": 6,
+      "verbatim_formula": "Risk score = [(-0.01470407 x GZMB expression value) + (-0.63970285 x CHMP7 expression value) + (-0.12447921 x NLRP1 expression value) + (-0.18172740 x MYD88 expression value) + (0.07255413 x ELANE expression value) + (-0.16451424 x AIM2 expression value)]",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "GSE65682 (GPL13667) array expression values as downloaded from GEO; exact transformation not stated (likely log2)",
+      "cutoff": "median risk score (recomputed within each cohort)",
+      "reported_performance": "GSE65682 discovery (n=263) tdAUC 0.70/0.68/0.65 at 7/14/28 d; GSE65682 validation (n=216) 0.66/0.63/0.64; whole GSE65682 (test) 0.69/0.65/0.64; GSE95233 (n=51) 28-day mortality AUC 0.687",
+      "source_location": "Methods (prognostic model construction) + Results 'Development of a prognostic risk score' + Figures 3-4",
+      "released_code_or_model": null
+    },
+    {
+      "model_id": "Liang2022_pyroptosis_clusters",
+      "model_type": "subtype_clustering",
+      "purpose": "subtype",
+      "outcome_definition": "Consensus clusters (k=2) compared for survival; cluster 1 poorer prognosis",
+      "genes": [
+        {"symbol": "MYD88", "coef": null, "direction": "null"},
+        {"symbol": "NLRP3", "coef": null, "direction": "null"},
+        {"symbol": "TLR2", "coef": null, "direction": "null"},
+        {"symbol": "CASP5", "coef": null, "direction": "null"},
+        {"symbol": "NLRC4", "coef": null, "direction": "null"},
+        {"symbol": "ELANE", "coef": null, "direction": "null"},
+        {"symbol": "AIM2", "coef": null, "direction": "null"},
+        {"symbol": "GZMB", "coef": null, "direction": "null"},
+        {"symbol": "CHMP7", "coef": null, "direction": "null"},
+        {"symbol": "NLRP1", "coef": null, "direction": "null"},
+        {"symbol": "IRF1", "coef": null, "direction": "null"},
+        {"symbol": "PLCG1", "coef": null, "direction": "null"},
+        {"symbol": "SCAF11", "coef": null, "direction": "null"},
+        {"symbol": "AKT1", "coef": null, "direction": "null"},
+        {"symbol": "GSDMB", "coef": null, "direction": "null"},
+        {"symbol": "IRF2", "coef": null, "direction": "null"}
+      ],
+      "n_genes": 16,
+      "verbatim_formula": null,
+      "higher_score_means": "unclear",
+      "expression_scale_used": "unclear",
+      "cutoff": "consensus clustering k=2 (no transferable classifier)",
+      "reported_performance": "Kaplan-Meier survival difference between the two clusters in GSE65682 (Figure 2C); no AUC",
+      "source_location": "Results (16 pyroptosis-related DEGs) + Figure 2",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 479},
+    {"accession": "GSE65682", "role": "internal_validation", "n_used": 216},
+    {"accession": "GSE65682", "role": "DEG_screening", "n_used": 521},
+    {"accession": "GSE95233", "role": "external_validation", "n_used": 51}
+  ],
+  "notes": "Training = GSE65682 discovery subset (n=263, original MARS discovery split); validation = GSE65682 validation subset (n=216); test = all 479 GSE65682 sepsis patients. DEGs vs 42 healthy controls in GSE65682. GSE95233 used for 28-day mortality validation and diagnostic ROC. Clustering model has no portable assignment rule. Text writes 'NLPR1' once (typo for NLRP1)."
+}

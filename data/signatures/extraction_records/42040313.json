@@ -1,0 +1,34 @@
+{
+  "pmid": "42040313", "pmcid": "PMC13107476", "first_author": "Gan J", "year": "2026", "journal": "J Inflamm Res",
+  "title": "Cell Death Index Predicts Sepsis Outcomes and Highlights Necroptosis as a Therapeutic Target.",
+  "eligible": true, "exclusion_reason": null,
+  "models": [
+    {
+      "model_id": "Gan2026_CDI2",
+      "model_type": "linear_cox",
+      "purpose": "mortality",
+      "outcome_definition": "overall survival / 28-day mortality (7/14/28-day ROC)",
+      "genes": [
+        {"symbol": "PDZD8", "coef": 0.4987, "direction": "risk"},
+        {"symbol": "ADRB2", "coef": -0.4216, "direction": "protective"}
+      ],
+      "n_genes": 2,
+      "verbatim_formula": "CDI = 0.4987 × (PDZD8 expression) – 0.4216 × (ADRB2 expression)",
+      "higher_score_means": "higher risk",
+      "expression_scale_used": "GEO/ArrayExpress processed expression values (scale not stated)",
+      "cutoff": "median CDI",
+      "reported_performance": "GSE65682 derivation (n=479) AUC 0.65/0.68/0.70 at 7/14/28 d; E-MTAB-4421 (n=265) 28-day AUC 0.655; E-MTAB-7581 (n=176) 0.628",
+      "source_location": "Methods 'Construction of CDI' (formula) + Figure 1i + Figures 2-3",
+      "released_code_or_model": null
+    }
+  ],
+  "cohorts_used": [
+    {"accession": "GSE65682", "role": "training", "n_used": 479},
+    {"accession": "E-MTAB-4421", "role": "DEG_screening", "n_used": 265},
+    {"accession": "E-MTAB-4421", "role": "external_validation", "n_used": 265},
+    {"accession": "E-MTAB-7581", "role": "external_validation", "n_used": 176},
+    {"accession": "EGAS00001006283", "role": "scRNA", "n_used": null},
+    {"accession": "GSE167363", "role": "scRNA", "n_used": 7}
+  ],
+  "notes": "E-MTAB-4421 was used both to pre-screen prognostic genes (univariate Cox overlap with GSE65682) and as 'external validation', so it is not independent. Coefficients from multivariate Cox in GSE65682 after LASSO/RF/XGBoost intersection. Paper states GSE65682 platform GPL16791 (incorrect) and writes 'E-MTAB-7851' once (=E-MTAB-7581). Code available only on request."
+}
