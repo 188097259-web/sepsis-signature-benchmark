@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this code, the archived random signatures or the result tables, please cite this repository."
+type: software
+title: "Sepsis blood transcriptomic signature benchmark: analysis code, archived random signatures and results"
+abstract: "Code, input data, archived random signatures and result tables for a benchmark of 36 published sepsis prognostic gene signatures against random signatures built with a common modelling pipeline, with analyses of leukocyte composition and of the dependence of endotyping labels on batch composition."
+authors:
+  - family-names: Shui
+    given-names: Pengfei
+    orcid: "https://orcid.org/0009-0008-3375-1579"
+    affiliation: "Department of Emergency Medicine, Sir Run Run Shaw Hospital, Zhejiang University School of Medicine, Hangzhou, China"
+  - family-names: Dai
+    given-names: Junru
+    orcid: "https://orcid.org/0009-0000-0523-5317"
+    affiliation: "Department of Emergency Medicine, Sir Run Run Shaw Hospital, Zhejiang University School of Medicine, Hangzhou, China"
+  - family-names: Huang
+    given-names: Chen
+    orcid: "https://orcid.org/0009-0002-0531-0633"
+    affiliation: "Department of Nursing, Sir Run Run Shaw Hospital, Zhejiang University School of Medicine, Hangzhou, China"
+  - family-names: Zhan
+    given-names: Shuyu
+    orcid: "https://orcid.org/0009-0005-5668-1292"
+    affiliation: "Department of Emergency Medicine, Sir Run Run Shaw Hospital, Zhejiang University School of Medicine, Hangzhou, China"
+  - family-names: Yuan
+    given-names: Yue
+    orcid: "https://orcid.org/0009-0004-6930-3293"
+    affiliation: "Academic Centre for Nursing and Midwifery, Department of Public Health and Primary Care, KU Leuven, Leuven, Belgium"
+  - family-names: Hong
+    given-names: Yucai
+    orcid: "https://orcid.org/0009-0004-3780-6670"
+    affiliation: "Department of Emergency Medicine, Sir Run Run Shaw Hospital, Zhejiang University School of Medicine, Hangzhou, China"
+  - family-names: Zhang
+    given-names: Zhongheng
+    orcid: "https://orcid.org/0000-0002-2336-5323"
+    affiliation: "Department of Emergency Medicine, Sir Run Run Shaw Hospital, Zhejiang University School of Medicine, Hangzhou, China"
+  - family-names: Liu
+    given-names: Ning
+    orcid: "https://orcid.org/0009-0004-4692-461X"
+    affiliation: "Department of Emergency Medicine, Sir Run Run Shaw Hospital, Zhejiang University School of Medicine, Hangzhou, China"
+repository-code: "https://github.com/188097259-web/sepsis-signature-benchmark"
+license: MIT
+version: "1.0.0"
+date-released: "2026-11-25"
+keywords:
+  - sepsis
+  - transcriptome
+  - prognosis
+  - gene signature
+  - benchmarking
+  - endotypes
